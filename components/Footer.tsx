@@ -27,49 +27,49 @@ export default function Footer() {
             Home
           </Link>
           <Link
-            href="/about"
+            href="/noon"
             className="text-gray-500 hover:text-gray-600 transition"
           >
-            About
+            Noon
           </Link>
-          <ExternalLink href="https://leerob.substack.com">
-            Newsletter
-          </ExternalLink>
+          {/*<Link*/}
+          {/*  href="/newsletter"*/}
+          {/*  className="text-gray-500 hover:text-gray-600 transition"*/}
+          {/*>*/}
+          {/*  Newsletter*/}
+          {/*</Link>*/}
         </div>
         <div className="flex flex-col space-y-4">
-          <ExternalLink href="https://twitter.com/leeerob">
-            Twitter
-          </ExternalLink>
-          <ExternalLink href="https://github.com/leerob">GitHub</ExternalLink>
-          <ExternalLink href="https://www.youtube.com/@leerob">
+          <ExternalLink href="https://github.com/Frisbeetarian">GitHub</ExternalLink>
+          <ExternalLink href="https://www.youtube.com/channel/UCBQifVrmfoQS3RqBx70tw7A">
             YouTube
           </ExternalLink>
         </div>
         <div className="flex flex-col space-y-4">
-          <Link
-            href="/uses"
-            className="text-gray-500 hover:text-gray-600 transition"
-          >
-            Uses
-          </Link>
-          <Link
-            href="/guestbook"
-            className="text-gray-500 hover:text-gray-600 transition"
-          >
-            Guestbook
-          </Link>
-          <Link
-            href="/snippets"
-            className="text-gray-500 hover:text-gray-600 transition"
-          >
-            Snippets
-          </Link>
-          <Link
-            href="/tweets"
-            className="text-gray-500 hover:text-gray-600 transition"
-          >
-            Tweets
-          </Link>
+          {/*<Link*/}
+          {/*  href="/uses"*/}
+          {/*  className="text-gray-500 hover:text-gray-600 transition"*/}
+          {/*>*/}
+          {/*  Uses*/}
+          {/*</Link>*/}
+          {/*<Link*/}
+          {/*  href="/guestbook"*/}
+          {/*  className="text-gray-500 hover:text-gray-600 transition"*/}
+          {/*>*/}
+          {/*  Guestbook*/}
+          {/*</Link>*/}
+          {/*<Link*/}
+          {/*  href="/snippets"*/}
+          {/*  className="text-gray-500 hover:text-gray-600 transition"*/}
+          {/*>*/}
+          {/*  Snippets*/}
+          {/*</Link>*/}
+          {/*<Link*/}
+          {/*  href="/tweets"*/}
+          {/*  className="text-gray-500 hover:text-gray-600 transition"*/}
+          {/*>*/}
+          {/*  Tweets*/}
+          {/*</Link>*/}
         </div>
       </div>
     </footer>

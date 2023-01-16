@@ -3,7 +3,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import Container from '../components/Container';
-import BlogPostCard from '../components/BlogPostCard';
 import VideoCard from '../components/VideoCard';
 
 export default function Home() {
@@ -14,112 +13,67 @@ export default function Home() {
           <div className="flex flex-col-reverse sm:flex-row items-start">
             <div className="flex flex-col pr-8">
               <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-1 text-black dark:text-white">
-                Lee Robinson
+                Muhammad Sulayman Haydar
               </h1>
               <h2 className="text-gray-700 dark:text-gray-200 mb-4">
-                VP of Developer Experience at{' '}
-                <span className="font-semibold">Vercel</span>
+                Full Stack Developer, Visual/Audio creator.{' '}
+                {/*<span className="font-semibold">Vercel</span>*/}
               </h2>
               <p className="text-gray-600 dark:text-gray-400 mb-16">
-                Helping developers build a faster web. Teaching about web
-                development, serverless, and React / Next.js.
+                Full stack developer with over 12 years of experience building websites, services and platforms. Constantly tinkering and prototyping with new methodologies, technologies, languages and libraries. Able to architect and engineer the whole development stack from the front facing clients, to the APIs, the back-end services to the provisioning and configuring of the network infrastructure. I
+                rely almost entirely on open source and modern resources and libraries. The experience I gained handling active back-end services used by hundreds of thousands of active users enables me to architect and build back-end services which are wholly extensible and can scale. My freelance work over the years has enabled me to tinker with a vast array of different tools and libraries which I used to build everything from simple front facing portfolio sites to complex, real-time and entirely reactive and state driven client platforms.
               </p>
             </div>
-            <div className="w-[80px] sm:w-[176px] relative mb-8 sm:mb-0 mr-auto">
-              <Image
-                alt="Lee Robinson"
-                height={176}
-                width={176}
-                src="/avatar.jpg"
-                sizes="30vw"
-                priority
-                className="rounded-full filter grayscale"
-              />
-            </div>
+            {/*<div className="w-[80px] sm:w-[176px] relative mb-8 sm:mb-0 mr-auto">*/}
+            {/*  <Image*/}
+            {/*    alt="profile image"*/}
+            {/*    height={176}*/}
+            {/*    width={176}*/}
+            {/*    src="/avatar.jpg"*/}
+            {/*    sizes="30vw"*/}
+            {/*    priority*/}
+            {/*    className="rounded-full filter grayscale"*/}
+            {/*  />*/}
+            {/*</div>*/}
           </div>
-
-          <h3 className="font-bold text-2xl md:text-4xl tracking-tight mb-6 text-black dark:text-white">
-            Featured Posts
-          </h3>
-          <div className="flex gap-6 flex-col md:flex-row">
-            <BlogPostCard
-              title="Everything I Know About Style Guides, Design Systems, and Component Libraries"
-              slug="style-guides-component-libraries-design-systems"
-              gradient="from-[#D8B4FE] to-[#818CF8]"
-            />
-            <BlogPostCard
-              title="Rust Is The Future of JavaScript Infrastructure"
-              slug="rust"
-              gradient="from-[#6EE7B7] via-[#3B82F6] to-[#9333EA]"
-            />
-            <BlogPostCard
-              title="Past, Present, and Future of React State Management"
-              slug="react-state-management"
-              gradient="from-[#FDE68A] via-[#FCA5A5] to-[#FECACA]"
-            />
-          </div>
-          <Link
-            href="/blog"
-            className="flex items-center mt-8 text-gray-600 dark:text-gray-400 leading-7 rounded-lg hover:text-gray-800 dark:hover:text-gray-200 transition-all h-6"
-          >
-            <>
-              {'Read all posts'}
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                className="h-6 w-6 ml-1"
-              >
-                <path
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M17.5 12h-15m11.667-4l3.333 4-3.333-4zm3.333 4l-3.333 4 3.333-4z"
-                />
-              </svg>
-            </>
-          </Link>
 
           <h3 className="font-bold text-2xl md:text-4xl tracking-tight mb-4 mt-16 text-black dark:text-white">
-            Learn React & Next.js
+            Visualizations in Unreal Engine
           </h3>
           <p className="text-gray-600 dark:text-gray-400 mb-4">
-            Build and deploy a modern SaaS application using the most popular
-            open-source software. This course is 12 hours long and is completely
-            live streamed.
+            Visuals I work on in my spare time.
           </p>
           <VideoCard
             index="01"
-            href="https://www.youtube.com/watch?v=MxR5I5_hOKk&list=PL6bwFJ82M6FXgctyoWXqj7H0GK8_YIeF1&index=2"
-            length="1:02:45"
-            title="Introduction to React 2025"
+            href="https://www.youtube.com/watch?v=aohVNLJSZMs&feature=youtu.be"
+            length="02:01"
+            title=" The Mysterious Vanishing of Electra (Fan made music video)"
           />
           <VideoCard
             index="02"
-            href="https://www.youtube.com/watch?v=AGl52moyISU&list=PL6bwFJ82M6FXgctyoWXqj7H0GK8_YIeF1&index=3"
-            length="54:22"
-            title="Firestore, Chakra UI, Absolute Imports"
+            href="https://www.youtube.com/watch?v=Ayr78UM0TIs"
+            length="01:13"
+            title="تعغ"
           />
           <VideoCard
             index="03"
-            href="https://www.youtube.com/watch?v=3g6-v3_BNbM&list=PL6bwFJ82M6FXgctyoWXqj7H0GK8_YIeF1&index=4"
-            length="1:08:30"
-            title="Designing & Building the Dashboard"
+            href="https://youtu.be/xcB8BbcAbhA"
+            length="03:00"
+            title="Say the Name (Fan made music video)"
           />
           <VideoCard
             index="04"
-            href="https://www.youtube.com/watch?v=u8iv_yhSRI8&list=PL6bwFJ82M6FXgctyoWXqj7H0GK8_YIeF1&index=5"
-            length="1:13:45"
-            title="Firebase Admin with Next.js + SWR"
+            href="https://www.youtube.com/watch?v=LT3i2f6IaCc"
+            length="04:45"
+            title="Toni Geitani - Laysa Kul Shay' Yashrab Al Ma' [Official Video]"
           />
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="https://www.youtube.com/playlist?list=PL6bwFJ82M6FXgctyoWXqj7H0GK8_YIeF1"
+            href="https://www.youtube.com/playlist?list=PLxVxxL4yicyb41Ug_wFyrzr7lWgazshj4"
             className="flex items-center mt-8 text-gray-600 dark:text-gray-400 leading-7 rounded-lg hover:text-gray-800 dark:hover:text-gray-200 transition-all h-6"
           >
-            Watch all videos
+            Watch all visualizations
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -135,6 +89,7 @@ export default function Home() {
               />
             </svg>
           </a>
+          <span className="h-16" />
         </div>
       </Container>
     </Suspense>
