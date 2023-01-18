@@ -2,15 +2,12 @@ import Container from 'components/Container';
 import FunctionCard from 'components/FunctionCard';
 import { InferGetStaticPropsType } from 'next';
 import { allSnippetsQuery } from 'lib/queries';
-import { getClient } from 'lib/sanity-server';
 import { Snippet } from 'lib/types';
 
-export default function Snippets({
-  snippets
-}: InferGetStaticPropsType<typeof getStaticProps>) {
+export default function Snippets({ snippets }) {
   return (
     <Container
-      title="Code Snippets – Lee Robinson"
+      title="Code Snippets – Muhammad Sulayman Haydar"
       description="A collection of code snippets – including serverless functions, Node.js scripts, and CSS tricks."
     >
       <div className="flex flex-col items-start justify-center max-w-2xl mx-auto mb-16">
@@ -37,10 +34,4 @@ export default function Snippets({
       </div>
     </Container>
   );
-}
-
-export async function getStaticProps({ preview = false }) {
-  const snippets: Snippet[] = await getClient(preview).fetch(allSnippetsQuery);
-
-  return { props: { snippets } };
 }

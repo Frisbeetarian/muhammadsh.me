@@ -40,6 +40,11 @@ module.exports = {
             thead: {
               borderBottomColor: theme('colors.gray.200')
             },
+            // p: {
+            // span: {
+            //   color: theme('colors.blue.700')
+            // },
+            // },
             code: { color: theme('colors.pink.500') },
             'blockquote p:first-of-type::before': false,
             'blockquote p:last-of-type::after': false

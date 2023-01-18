@@ -15,10 +15,12 @@ export default function Home() {
               <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-1 text-black dark:text-white">
                 Muhammad Sulayman Haydar
               </h1>
+
               <h2 className="text-gray-700 dark:text-gray-200 mb-4">
                 Full Stack Developer, Visual/Audio creator.{' '}
                 {/*<span className="font-semibold">Vercel</span>*/}
               </h2>
+
               <p className="text-gray-600 dark:text-gray-400 mb-16">
                 Full stack developer with over 12 years of experience building
                 websites, services and platforms. Constantly tinkering and
@@ -37,6 +39,7 @@ export default function Home() {
                 reactive and state driven client platforms.
               </p>
             </div>
+
             {/*<div className="w-[80px] sm:w-[176px] relative mb-8 sm:mb-0 mr-auto">*/}
             {/*  <Image*/}
             {/*    alt="profile image"*/}
@@ -53,33 +56,39 @@ export default function Home() {
           <h3 className="font-bold text-2xl md:text-4xl tracking-tight mb-4 mt-16 text-black dark:text-white">
             Visualizations in Unreal Engine
           </h3>
+
           <p className="text-gray-600 dark:text-gray-400 mb-4">
             Visuals I work on in my spare time.
           </p>
+
           <VideoCard
             index="01"
             href="https://www.youtube.com/watch?v=aohVNLJSZMs&feature=youtu.be"
             length="02:01"
             title=" The Mysterious Vanishing of Electra (Fan made music video)"
           />
+
           <VideoCard
             index="02"
             href="https://www.youtube.com/watch?v=Ayr78UM0TIs"
             length="01:13"
             title="تعغ"
           />
+
           <VideoCard
             index="03"
             href="https://youtu.be/xcB8BbcAbhA"
             length="03:00"
             title="Say the Name (Fan made music video)"
           />
+
           <VideoCard
             index="04"
             href="https://www.youtube.com/watch?v=LT3i2f6IaCc"
             length="04:45"
             title="Toni Geitani - Laysa Kul Shay' Yashrab Al Ma' [Official Video]"
           />
+
           <a
             target="_blank"
             rel="noopener noreferrer"
