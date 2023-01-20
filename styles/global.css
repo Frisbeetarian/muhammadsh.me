@@ -7,6 +7,126 @@
   color: #fefefe;
 }
 
+
+[data-theme="light"] {
+  /* dark theme styles go here */
+}
+
+[data-theme="dark"] {
+  /* dark theme styles go here */
+}
+
+[data-theme="pink"] {
+  /* pink theme styles go here */
+}
+
+@font-face {
+  font-family: 'Rajdhani-Bold';
+  src: url('../fonts/Rajdhani/Rajdhani-Bold.eot');
+  src: url('../fonts/Rajdhani/Rajdhani-Bold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Rajdhani/Rajdhani-Bold.woff2') format('woff2'),
+  url('../fonts/Rajdhani/Rajdhani-Bold.woff2') format('woff2'),
+  url('../fonts/Rajdhani/Rajdhani-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rajdhani-Semi-Bold';
+  src: url('../fonts/Rajdhani/Rajdhani-SemiBold.eot');
+  src: url('../fonts/Rajdhani/Rajdhani-SemiBold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Rajdhani/Rajdhani-SemiBold.woff2') format('woff2'),
+  url('../fonts/Rajdhani/Rajdhani-SemiBold.woff2') format('woff2'),
+  url('../fonts/Rajdhani/Rajdhani-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rajdhani-Medium';
+  src: url('../fonts/Rajdhani/Rajdhani-Medium.eot');
+  src: url('../fonts/Rajdhani/Rajdhani-Medium.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Rajdhani/Rajdhani-Medium.woff2') format('woff2'),
+  url('../fonts/Rajdhani/Rajdhani-Medium.woff2') format('woff2'),
+  url('../fonts/Rajdhani/Rajdhani-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rajdhani-Regular';
+  src: url('../fonts/Rajdhani/Rajdhani-Regular.eot');
+  src: url('../fonts/Rajdhani/Rajdhani-Regular.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Rajdhani/Rajdhani-Regular.woff2') format('woff2'),
+  url('../fonts/Rajdhani/Rajdhani-Regular.woff2') format('woff2'),
+  url('../fonts/Rajdhani/Rajdhani-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rajdhani-Light';
+  src: url('../fonts/Rajdhani/Rajdhani-Light.eot');
+  src: url('../fonts/Rajdhani/Rajdhani-Light.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Rajdhani/Rajdhani-Light.woff2') format('woff2'),
+  url('../fonts/Rajdhani/Rajdhani-Light.woff2') format('woff2'),
+  url('../fonts/Rajdhani/Rajdhani-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+.rajdhani-bold {
+  font-family: Rajdhani-Bold, serif;
+}
+
+.rajdhani-semi-bold {
+  font-family: Rajdhani-Semi-Bold, serif;
+}
+
+.rajdhani-medium {
+  font-family: Rajdhani-Medium, serif;
+}
+
+.rajdhani-regular {
+  font-family: Rajdhani-Regular, serif;
+}
+
+.rajdhani-light {
+  font-family: Rajdhani-Light, serif;
+}
+
+
+.sofia-sans-regular {
+  font-family: Sofia-Sans-Regular, serif;
+}
+
+.sofia-sans-thin {
+  font-family: Sofia-Sans-Thin, serif;
+}
+
+.tajawal-regular {
+  font-family: Tajawal-Regular, serif;
+}
+
+.tajawal-extra-light {
+  font-family: Tajawal-ExtraLight, serif;
+}
+
+.tajawal-extra-bold {
+  font-family: Tajawal-ExtraBold, serif;
+}
+
+/*h1, h2, h3, h4, h5, h6{*/
+/*  font-family: Rajdhani-Semi-Bold, serif;*/
+/*}*/
+
+
 html {
   min-width: 360px;
   scroll-behavior: smooth;

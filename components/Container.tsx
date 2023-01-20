@@ -27,6 +27,8 @@ function NavItem({ href, text }) {
   );
 }
 
+const themes = [{ name: 'light' }, { name: 'dark' }, { name: 'pink' }];
+
 export default function Container(props) {
   const [mounted, setMounted] = useState(false);
   const { resolvedTheme, setTheme } = useTheme();
@@ -46,14 +48,14 @@ export default function Container(props) {
   };
 
   return (
-    <div className="bg-gray-50 dark:bg-gray-900">
+    <div className="bg-gray-50 dark:bg-gray-900 rajdhani-light">
       <Head>
         <title>{meta.title}</title>
         <meta name="robots" content="follow, index" />
         <meta content={meta.description} name="description" />
         <meta
           property="og:url"
-          content={`https://muhammadsh.me${router.asPath}`}
+          content={`https://muhammadsh.io${router.asPath}`}
         />
         <link rel="canonical" href={`https://muhammad.me${router.asPath}`} />
         <meta property="og:type" content={meta.type} />

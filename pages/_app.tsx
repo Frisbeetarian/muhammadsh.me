@@ -13,7 +13,7 @@ export default function App({
 }) {
   return (
     <SessionProvider session={session}>
-      <ThemeProvider attribute="class">
+      <ThemeProvider>
         <main className={interVariable.className}>
           <Component {...pageProps} />
           <Analytics />
