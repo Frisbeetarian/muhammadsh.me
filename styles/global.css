@@ -7,18 +7,66 @@
   color: #fefefe;
 }
 
+:root {
+  --background: theme('colors.white');
+  --background-secondary: theme('colors.gray.50');
 
-[data-theme="light"] {
-  /* dark theme styles go here */
+  --primary-dark: theme('colors.gray.900');
+  --primary-medium: theme('colors.gray.700');
+  --primary-light: theme('colors.gray.500');
 }
 
-[data-theme="dark"] {
-  /* dark theme styles go here */
+[data-theme='dark'] {
+  --background: theme('colors.gray.900');
+  --background-secondary: theme('colors.gray.800');
+
+  --accent-dark: theme('colors.fuchsia.900');
+  --accent-medium: theme('colors.fuchsia.700');
+  --accent-light: theme('colors.fuchsia.500');
+
+  --primary-dark: theme('colors.white');
+  --primary-medium: theme('colors.gray.300');
+  --primary-light: theme('colors.gray.100');
 }
 
-[data-theme="pink"] {
-  /* pink theme styles go here */
+[data-theme='emerald'] {
+  --background: theme('colors.emerald.900');
+  --background-secondary: theme('colors.emerald.800');
+
+  --accent-dark: theme('colors.emerald.900');
+  --accent-medium: theme('colors.emerald.700');
+  --accent-light: theme('colors.emerald.500');
+
+  --primary-dark: theme('colors.pink.500');
+  --primary-medium: theme('colors.emerald.300');
+  --primary-light: theme('colors.emerald.100');
 }
+
+[data-theme='pink'] {
+  --background: theme('colors.pink.900');
+  --background-secondary: theme('colors.pink.800');
+
+  --accent-dark: theme('colors.pink.900');
+  --accent-medium: theme('colors.pink.700');
+  --accent-light: theme('colors.pink.500');
+
+  --primary-dark: theme('colors.emerald.500');
+  --primary-medium: theme('colors.pink.200');
+  --primary-light: theme('colors.pink.100');
+}
+
+
+/*[data-theme="light"] {*/
+/*  !* dark theme styles go here *!*/
+/*}*/
+
+/*[data-theme="dark"] {*/
+/*  !* dark theme styles go here *!*/
+/*}*/
+
+/*[data-theme="pink"] {*/
+/*  !* pink theme styles go here *!*/
+/*}*/
 
 @font-face {
   font-family: 'Rajdhani-Bold';
@@ -99,27 +147,6 @@
 
 .rajdhani-light {
   font-family: Rajdhani-Light, serif;
-}
-
-
-.sofia-sans-regular {
-  font-family: Sofia-Sans-Regular, serif;
-}
-
-.sofia-sans-thin {
-  font-family: Sofia-Sans-Thin, serif;
-}
-
-.tajawal-regular {
-  font-family: Tajawal-Regular, serif;
-}
-
-.tajawal-extra-light {
-  font-family: Tajawal-ExtraLight, serif;
-}
-
-.tajawal-extra-bold {
-  font-family: Tajawal-ExtraBold, serif;
 }
 
 /*h1, h2, h3, h4, h5, h6{*/

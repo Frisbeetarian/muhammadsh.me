@@ -15,10 +15,10 @@ export default function Noon() {
       description="Noon is a free, open source, secure communication platform. For anyone interested in having their own secure communication platform that internalizes all data and communication and does not rely on any third party service or package."
     >
       <div className="flex flex-col items-start justify-center max-w-4xl 2xl:max-w-4xl mx-auto mb-16">
-        <div className="flex flex-col items-start rajdhani-light text-gray-600 dark:text-gray-300">
-          <h1 className="mb-4 text-3xl  tracking-tight text-black md:text-6xl dark:text-white">
+        <div className="flex flex-col items-start rajdhani-light text-th-primary-medium">
+          <h1 className="mb-4 text-3xl tracking-tight md:text-6xl ">
             <a
-              className="underline flex items-center justify-center transform hover:scale-[1.01] hover:ml-1 transition-all"
+              className="underline flex items-center justify-center transform hover:scale-[1.01] hover:ml-1 transition-all text-th-primary-dark"
               href="https://noon.tube"
               target="_blank"
               rel="noopener noreferrer"
@@ -91,7 +91,7 @@ export default function Noon() {
             to the video conferencing. But still require a shitload of
             enhancements, optimizations and debugging. The platform is live on{' '}
             <a
-              className="underline text-white transform hover:scale-[1.01] hover:ml-1 transition-all"
+              className="underline text-white transform hover:scale-[1.01] hover:ml-1 transition-all text-th-primary-dark"
               href="https://noon.tube"
               target="_blank"
               rel="noopener noreferrer"
@@ -125,10 +125,10 @@ export default function Noon() {
         {/*</div>*/}
         {/*{!searchValue && (*/}
         {/*<>*/}
-        <div className="flex flex-col items-start rajdhani-light text-gray-600 dark:text-gray-300">
+        <div className="flex flex-col items-start rajdhani-light text-th-primary-medium">
           <h3 className="mt-8 mb-4 text-2xl  tracking-tight text-black md:text-4xl dark:text-white">
             <a
-              className="underline  flex items-center justify-center transform hover:scale-[1.01] hover:ml-1 transition-all"
+              className="underline  flex items-center justify-center transform hover:scale-[1.01] hover:ml-1 transition-all text-th-primary-dark"
               href="https://github.com/Frisbeetarian/noon-backend"
               target="_blank"
               rel="noopener noreferrer"
@@ -180,16 +180,16 @@ export default function Noon() {
 
           <ul className="mb-4  ml-4">
             <li className="mb-4">
-              <h4 className="w-full mb-2 text-lg  text-gray-900 md:text-xl dark:text-gray-100">
+              <h4 className="w-full mb-2 text-lg  md:text-xl">
                 <a
-                  className="underline  flex items-center transform hover:scale-[1.01] hover:ml-2 transition-all"
+                  className="underline flex items-center transform hover:scale-[1.01] hover:ml-2 transition-all text-th-primary-dark"
                   href="https://github.com/Frisbeetarian/noon-media-microservice"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   The Media microservice
                   <Image
-                    className="text-white bg-white  rounded ml-3 "
+                    className="text-white bg-white rounded ml-3 "
                     width="16"
                     height="16"
                     src="/external-link.svg"
@@ -271,9 +271,9 @@ export default function Noon() {
             </li>
 
             <li className="mb-4">
-              <h4 className="w-full mb-2 text-lg  text-gray-900 md:text-xl dark:text-gray-100">
+              <h4 className="w-full mb-2 text-lg  md:text-xl">
                 <a
-                  className="underline flex items-center transform hover:scale-[1.01] hover:ml-2 transition-all"
+                  className="underline flex items-center transform hover:scale-[1.01] hover:ml-2 transition-all text-th-primary-dark"
                   href="https://github.com/Frisbeetarian/noon-search-microservice"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -296,9 +296,9 @@ export default function Noon() {
             </li>
 
             <li className="mb-4">
-              <h4 className="w-full mb-2 text-lg  text-gray-900 md:text-xl dark:text-gray-100">
+              <h4 className="w-full mb-2 text-lg  md:text-xl">
                 <a
-                  className="underline flex items-center transform hover:scale-[1.01] hover:ml-2 transition-all"
+                  className="underline flex items-center transform hover:scale-[1.01] hover:ml-2 transition-all text-th-primary-dark"
                   href="https://github.com/Frisbeetarian/noon-relay-microservice"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -321,9 +321,9 @@ export default function Noon() {
             </li>
 
             <li className="mb-4">
-              <h4 className="w-full mb-2 text-lg  text-gray-900 md:text-xl dark:text-gray-100">
+              <h4 className="w-full mb-2 text-lg  md:text-xl">
                 <a
-                  className="underline flex items-center transform hover:scale-[1.01] hover:ml-2 transition-all"
+                  className="underline flex items-center transform hover:scale-[1.01] hover:ml-2 transition-all text-th-primary-dark"
                   href="https://github.com/Frisbeetarian/noon-rabbit-mq-rpc"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -393,9 +393,9 @@ export default function Noon() {
             </li>
 
             <li className="mb-4">
-              <h4 className="w-full mb-2 text-lg  text-gray-900 md:text-xl dark:text-gray-100">
+              <h4 className="w-full mb-2 text-lg  md:text-xl">
                 <a
-                  className="underline flex items-center transform hover:scale-[1.01] hover:ml-2 transition-all"
+                  className="underline flex items-center transform hover:scale-[1.01] hover:ml-2 transition-all text-th-primary-dark"
                   href="https://github.com/Frisbeetarian/noon-search-microservice"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -437,7 +437,7 @@ export default function Noon() {
                 purposes. You can access the Jitsi instance running on the VPS
                 by following the dedicated Noon domain on{' '}
                 <a
-                  className="underline text-black dark:text-white transform hover:scale-[1.01] hover:ml-1 transition-all"
+                  className="underline text-black dark:text-white transform hover:scale-[1.01] hover:ml-1 transition-all text-th-primary-dark"
                   href="https://noon-vid.com"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -462,11 +462,11 @@ export default function Noon() {
           </ul>
         </div>
 
-        <div className="flex flex-col items-start rajdhani-light text-gray-600 dark:text-gray-300">
+        <div className="flex flex-col items-start rajdhani-light text-th-primary-medium">
           <div className="flex w-full">
             <h3 className="mt-8 mb-4 text-2xl  tracking-tight text-black md:text-4xl dark:text-white justify-center items-center">
               <a
-                className="underline flex items-center justify-center transform hover:scale-[1.01] hover:ml-1 transition-all"
+                className="underline flex items-center justify-center transform hover:scale-[1.01] hover:ml-1 transition-all text-th-primary-dark"
                 href="https://github.com/Frisbeetarian/noon-client"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -527,9 +527,9 @@ export default function Noon() {
             consistent way.
           </p>
 
-          <h4 className="w-full mb-2 text-lg  text-gray-900 md:text-xl dark:text-gray-100">
+          <h4 className="w-full mb-2 text-lg  md:text-xl">
             <a
-              className="underline flex items-center transform hover:scale-[1.01] hover:ml-2 transition-all"
+              className="underline flex items-center transform hover:scale-[1.01] hover:ml-2 transition-all text-th-primary-dark"
               href="https://github.com/Frisbeetarian/noon-client/blob/main/src/store/store.ts"
               target="_blank"
               rel="noopener noreferrer"
@@ -551,7 +551,7 @@ export default function Noon() {
           </p>
 
           <p className="ml-4 mb-4 ">
-            <span className="text-black dark:text-white rajdhani-light ">
+            <span className="text-th-primary-dark rajdhani-light ">
               Users reducer
             </span>
             : is responsible for storing and retrieving user authentication
@@ -560,53 +560,51 @@ export default function Noon() {
           </p>
 
           <p className="ml-4 mb-4 ">
-            <span className="text-black dark:text-white ">
-              Profiles reducer
-            </span>
-            : is responsible for managing the list of profiles for friends and
+            <span className="text-th-primary-dark ">Profiles reducer</span>: is
+            responsible for managing the list of profiles for friends and
             tracking friend requests, blocked/unfriended, etc. It also keeps
             track of who the logged in user sent friend requests to and received
             friend requests from.
           </p>
 
           <p className="ml-4 mb-4 ">
-            <span className="text-black dark:text-white ">UI reducer</span>: is
+            <span className="text-th-primary-dark ">UI reducer</span>: is
             responsible for managing the state of the user interface, including
             managing the active navigation, displaying and hiding UI elements,
             and handling any UI-related errors or issues.
           </p>
 
           <p className="ml-4 mb-4 ">
-            <span className="text-black dark:text-white ">Chat reducer</span>:
-            is responsible for instantiating and managing conversations, keeping
+            <span className="text-th-primary-dark ">Chat reducer</span>: is
+            responsible for instantiating and managing conversations, keeping
             track of active conversations, updating conversations with new
             messages, etc.
           </p>
 
           <p className="ml-4 mb-4 ">
-            <span className="text-black dark:text-white ">Search reducer</span>:
-            is responsible for managing the search filters, which include
-            setting and updating search queries, handling search results, and
-            managing any search-related errors or issues.
+            <span className="text-th-primary-dark ">Search reducer</span>: is
+            responsible for managing the search filters, which include setting
+            and updating search queries, handling search results, and managing
+            any search-related errors or issues.
           </p>
 
           <p className="ml-4 mb-4 ">
-            <span className="text-black dark:text-white ">Groups reducer</span>:
-            is responsible for managing the state of groups, including creating
-            new groups, updating existing groups, and handling any group-related
+            <span className="text-th-primary-dark ">Groups reducer</span>: is
+            responsible for managing the state of groups, including creating new
+            groups, updating existing groups, and handling any group-related
             errors or issues.
           </p>
 
           <p className="ml-4 mb-4 ">
-            <span className="text-black dark:text-white ">Video reducer</span>:
-            is responsible for instantiating and managing video conversations,
+            <span className="text-th-primary-dark ">Video reducer</span>: is
+            responsible for instantiating and managing video conversations,
             keeping track of their state, and handling any video-related errors
             or issues.
           </p>
 
           <p className="ml-4 mb-4 ">
-            <span className="text-black dark:text-white ">Files reducer</span>:
-            is responsible for managing files, including uploading, downloading,
+            <span className="text-th-primary-dark ">Files reducer</span>: is
+            responsible for managing files, including uploading, downloading,
             and deleting files, and handling any file-related errors or issues.
           </p>
 
@@ -619,9 +617,9 @@ export default function Noon() {
           {/*  handling any errors or disconnections.*/}
           {/*</p>*/}
 
-          <h4 className="w-full mb-2 text-lg  text-gray-900 md:text-xl dark:text-gray-100">
+          <h4 className="w-full mb-2 text-lg  md:text-xl">
             <a
-              className="underline flex items-center transform hover:scale-[1.01] hover:ml-2 transition-all"
+              className="underline flex items-center transform hover:scale-[1.01] hover:ml-2 transition-all text-th-primary-dark"
               href="https://github.com/Frisbeetarian/noon-client/blob/main/src/components/Video.tsx"
               target="_blank"
               rel="noopener noreferrer"
@@ -664,7 +662,7 @@ export default function Noon() {
 
         <div className="flex flex-col md:flex-row w-full items-center md:items-start justify-around">
           <div className="mb-10 md:mb-0">
-            <h4 className="w-full mb-2 text-lg  text-gray-900 md:text-xl dark:text-gray-100 mb-5">
+            <h4 className="w-full mb-2 text-lg  md:text-xl mb-5">
               Backend dependencies as of v0.0.5-alpha
             </h4>
 
@@ -897,7 +895,7 @@ export default function Noon() {
           </div>
 
           <div className="">
-            <h4 className="w-full mb-2 text-lg  text-gray-900 md:text-xl dark:text-gray-100 mb-5">
+            <h4 className="w-full mb-2 text-lg  md:text-xl mb-5">
               Client dependencies as of v0.0.5-alpha
             </h4>
 
