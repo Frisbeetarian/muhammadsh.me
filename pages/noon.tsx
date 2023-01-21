@@ -64,8 +64,7 @@ export default function Noon() {
             retrieved. Running out of cash on hand and with my freelance
             projects all brought to a screeching halt due to that same liquidity
             crisis, I urgently had to find employment and a steady source of
-            income and was extremely lucky to be picked up by Myki in early
-            2020.
+            income and was lucky to be picked up by Myki in early 2020.
           </p>
 
           <p className="mb-4   ">
@@ -81,7 +80,7 @@ export default function Noon() {
             packages.
           </p>
 
-          <p className="mb-4   ">
+          <p className="mb-4">
             Noon provides the features that people have come to expect from
             traditional communication and messaging platforms. From
             private/group chat, to media sharing in conversations, to video
