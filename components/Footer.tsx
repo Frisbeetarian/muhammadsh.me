@@ -31,7 +31,7 @@ export default function Footer() {
             Home
           </Link>
           <Link
-            href="/noon"
+            href="/noon/index"
             className="text-gray-500 hover:text-gray-600 transition"
           >
             Noon
