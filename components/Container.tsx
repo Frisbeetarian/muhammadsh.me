@@ -75,20 +75,18 @@ export default function Container(props) {
           <div className="ml-[-0.60rem]">
             <MobileMenu />
             <NavItem href="/" text="Home" />
-            {/*<NavItem href="/guestbook" text="Guestbook" />*/}
             <NavItem href="/noon" text="Noon" />
             <NavItem href="/visuals" text="Visuals" />
             <NavItem href="/audio" text="Audio" />
-            {/*<NavItem href="/blog" text="Blog" />*/}
-            {/*<NavItem href="/snippets" text="Snippets" />*/}
           </div>
 
           <ThemeChanger />
         </nav>
       </div>
+
       <main
         id="skip"
-        className="flex flex-col justify-center px-8 bg-th-background"
+        className="flex flex-col justify-center items-center px-4 md:px-8 bg-th-background"
       >
         {children}
         <Footer />

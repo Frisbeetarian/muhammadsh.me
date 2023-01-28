@@ -2,286 +2,103 @@ import { Suspense, useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Container from 'components/Container';
 import CodeBlock from '../../components/CodeBlock';
+import NoonMobileNavigation from '../../components/NoonMobileNavigation';
+import NoonNavigation from '../../components/NoonNavigation';
 export default function Noon() {
+  const [isMobile, setIsMobile] = useState(true);
+
   // const [searchValue, setSearchValue] = useState('');
   const internalsRef = useRef(null);
-  const internalsNavRef = useRef(null);
 
   const mediaRef = useRef(null);
-  const mediaNavRef = useRef(null);
 
   const searchRef = useRef(null);
-  const searchNavRef = useRef(null);
 
   const relayRef = useRef(null);
-  const relayNavRef = useRef(null);
 
   const RPCRef = useRef(null);
-  const RPCNavRef = useRef(null);
 
   const videoRef = useRef(null);
-  const videoNavRef = useRef(null);
 
   const clientRef = useRef(null);
-  const clientNavRef = useRef(null);
 
   const RTKRef = useRef(null);
-  const RTKNavRef = useRef(null);
 
   const videoBridgeRef = useRef(null);
-  const videoBridgeNavRef = useRef(null);
 
   const dependenciesRef = useRef(null);
-  const dependenciesNavRef = useRef(null);
 
-  const handleInternalsScroll = () => {
-    internalsRef.current?.scrollIntoView({ behavior: 'smooth' });
+  useEffect(() => {
+    if (window.innerWidth <= 1000) {
+      setIsMobile(true);
+    } else {
+      setIsMobile(false);
+    }
+  }, []);
 
-    internalsNavRef.current.style.textDecoration = 'underline';
+  useEffect(() => {
+    window.addEventListener('resize', (e) => {
+      if (window.innerWidth <= 1000) {
+        setIsMobile(true);
+      } else {
+        setIsMobile(false);
+      }
+    });
 
-    mediaNavRef.current.style.textDecoration = 'none';
-    searchNavRef.current.style.textDecoration = 'none';
-    relayNavRef.current.style.textDecoration = 'none';
-    RPCNavRef.current.style.textDecoration = 'none';
-    videoNavRef.current.style.textDecoration = 'none';
-    clientNavRef.current.style.textDecoration = 'none';
-    RTKNavRef.current.style.textDecoration = 'none';
-    videoBridgeNavRef.current.style.textDecoration = 'none';
-    dependenciesNavRef.current.style.textDecoration = 'none';
-  };
-
-  const handleMediaScroll = () => {
-    mediaRef.current?.scrollIntoView({ behavior: 'smooth' });
-
-    mediaNavRef.current.style.textDecoration = 'underline';
-
-    internalsNavRef.current.style.textDecoration = 'none';
-    searchNavRef.current.style.textDecoration = 'none';
-    relayNavRef.current.style.textDecoration = 'none';
-    RPCNavRef.current.style.textDecoration = 'none';
-    videoNavRef.current.style.textDecoration = 'none';
-    clientNavRef.current.style.textDecoration = 'none';
-    RTKNavRef.current.style.textDecoration = 'none';
-    videoBridgeNavRef.current.style.textDecoration = 'none';
-    dependenciesNavRef.current.style.textDecoration = 'none';
-  };
-
-  const handleSearchScroll = () => {
-    searchRef.current?.scrollIntoView({ behavior: 'smooth' });
-
-    searchNavRef.current.style.textDecoration = 'underline';
-
-    internalsNavRef.current.style.textDecoration = 'none';
-    mediaNavRef.current.style.textDecoration = 'none';
-    relayNavRef.current.style.textDecoration = 'none';
-    RPCNavRef.current.style.textDecoration = 'none';
-    videoNavRef.current.style.textDecoration = 'none';
-    clientNavRef.current.style.textDecoration = 'none';
-    RTKNavRef.current.style.textDecoration = 'none';
-    videoBridgeNavRef.current.style.textDecoration = 'none';
-    dependenciesNavRef.current.style.textDecoration = 'none';
-  };
-
-  const handleRelayScroll = () => {
-    relayRef.current?.scrollIntoView({ behavior: 'smooth' });
-
-    relayNavRef.current.style.textDecoration = 'underline';
-
-    internalsNavRef.current.style.textDecoration = 'none';
-    mediaNavRef.current.style.textDecoration = 'none';
-    searchNavRef.current.style.textDecoration = 'none';
-    RPCNavRef.current.style.textDecoration = 'none';
-    videoNavRef.current.style.textDecoration = 'none';
-    clientNavRef.current.style.textDecoration = 'none';
-    RTKNavRef.current.style.textDecoration = 'none';
-    videoBridgeNavRef.current.style.textDecoration = 'none';
-    dependenciesNavRef.current.style.textDecoration = 'none';
-  };
-
-  const handleRPCScroll = () => {
-    RPCRef.current?.scrollIntoView({ behavior: 'smooth' });
-
-    RPCNavRef.current.style.textDecoration = 'underline';
-
-    internalsNavRef.current.style.textDecoration = 'none';
-    mediaNavRef.current.style.textDecoration = 'none';
-    searchNavRef.current.style.textDecoration = 'none';
-    relayNavRef.current.style.textDecoration = 'none';
-    videoNavRef.current.style.textDecoration = 'none';
-    clientNavRef.current.style.textDecoration = 'none';
-    RTKNavRef.current.style.textDecoration = 'none';
-    videoBridgeNavRef.current.style.textDecoration = 'none';
-    dependenciesNavRef.current.style.textDecoration = 'none';
-  };
-
-  const handleVideoScroll = () => {
-    videoRef.current?.scrollIntoView({ behavior: 'smooth' });
-
-    videoNavRef.current.style.textDecoration = 'underline';
-
-    internalsNavRef.current.style.textDecoration = 'none';
-    mediaNavRef.current.style.textDecoration = 'none';
-    searchNavRef.current.style.textDecoration = 'none';
-    relayNavRef.current.style.textDecoration = 'none';
-    RPCNavRef.current.style.textDecoration = 'none';
-    clientNavRef.current.style.textDecoration = 'none';
-    RTKNavRef.current.style.textDecoration = 'none';
-    videoBridgeNavRef.current.style.textDecoration = 'none';
-    dependenciesNavRef.current.style.textDecoration = 'none';
-  };
-
-  const handleClientScroll = () => {
-    clientRef.current?.scrollIntoView({ behavior: 'smooth' });
-
-    clientNavRef.current.style.textDecoration = 'underline';
-
-    internalsNavRef.current.style.textDecoration = 'none';
-    mediaNavRef.current.style.textDecoration = 'none';
-    searchNavRef.current.style.textDecoration = 'none';
-    relayNavRef.current.style.textDecoration = 'none';
-    RPCNavRef.current.style.textDecoration = 'none';
-    videoNavRef.current.style.textDecoration = 'none';
-    RTKNavRef.current.style.textDecoration = 'none';
-    videoBridgeNavRef.current.style.textDecoration = 'none';
-    dependenciesNavRef.current.style.textDecoration = 'none';
-  };
-
-  const handleRTKScroll = () => {
-    RTKRef.current?.scrollIntoView({ behavior: 'smooth' });
-
-    RTKNavRef.current.style.textDecoration = 'underline';
-
-    internalsNavRef.current.style.textDecoration = 'none';
-    mediaNavRef.current.style.textDecoration = 'none';
-    searchNavRef.current.style.textDecoration = 'none';
-    relayNavRef.current.style.textDecoration = 'none';
-    RPCNavRef.current.style.textDecoration = 'none';
-    videoNavRef.current.style.textDecoration = 'none';
-    clientNavRef.current.style.textDecoration = 'none';
-    videoBridgeNavRef.current.style.textDecoration = 'none';
-    dependenciesNavRef.current.style.textDecoration = 'none';
-  };
-
-  const handleVideoBridgeScroll = () => {
-    videoBridgeRef.current?.scrollIntoView({ behavior: 'smooth' });
-
-    videoBridgeNavRef.current.style.textDecoration = 'underline';
-
-    internalsNavRef.current.style.textDecoration = 'none';
-    mediaNavRef.current.style.textDecoration = 'none';
-    searchNavRef.current.style.textDecoration = 'none';
-    relayNavRef.current.style.textDecoration = 'none';
-    RPCNavRef.current.style.textDecoration = 'none';
-    videoNavRef.current.style.textDecoration = 'none';
-    clientNavRef.current.style.textDecoration = 'none';
-    RTKNavRef.current.style.textDecoration = 'none';
-    dependenciesNavRef.current.style.textDecoration = 'none';
-  };
-
-  const handleDependenciesScroll = () => {
-    dependenciesRef.current?.scrollIntoView({ behavior: 'smooth' });
-
-    dependenciesNavRef.current.style.textDecoration = 'underline';
-
-    internalsNavRef.current.style.textDecoration = 'none';
-    mediaNavRef.current.style.textDecoration = 'none';
-    searchNavRef.current.style.textDecoration = 'none';
-    relayNavRef.current.style.textDecoration = 'none';
-    RPCNavRef.current.style.textDecoration = 'none';
-    videoNavRef.current.style.textDecoration = 'none';
-    clientNavRef.current.style.textDecoration = 'none';
-    RTKNavRef.current.style.textDecoration = 'none';
-    videoBridgeNavRef.current.style.textDecoration = 'none';
-  };
+    return () => {
+      window.removeEventListener('resize', (e) => {
+        if (window.innerWidth <= 1000) {
+          setIsMobile(true);
+        } else {
+          setIsMobile(false);
+        }
+      });
+    };
+  });
 
   return (
     <Container
       title="Noon – Open Source Communication Platform"
       description="Noon is a free, open source, secure communication platform. For anyone interested in having their own secure communication platform that internalizes all data and communication and does not rely on any third party service or package."
     >
-      <div className="flex">
-        <div className="sticky top-5 h-screen w-1/6 mr-2">
-          <ul className="animate transition-all">
-            <li
-              ref={internalsNavRef}
-              onClick={handleInternalsScroll}
-              className="text-xl rajdhani-semi-bold hover:ml-1 cursor-pointer transition-all"
-            >
-              Internals
-            </li>
-            <li
-              ref={mediaNavRef}
-              onClick={handleMediaScroll}
-              className="ml-2 mb-1 hover:ml-3 cursor-pointer transition-all"
-            >
-              Media Microservice
-            </li>
-            <li
-              ref={searchNavRef}
-              onClick={handleSearchScroll}
-              className="ml-2 mb-1 hover:ml-3 cursor-pointer transition-all"
-            >
-              Search Microservice
-            </li>
-            <li
-              ref={relayNavRef}
-              onClick={handleRelayScroll}
-              className="ml-2 mb-1 hover:ml-3 cursor-pointer transition-all"
-            >
-              Relay Microservice
-            </li>
-            <li
-              ref={RPCNavRef}
-              onClick={handleRPCScroll}
-              className="ml-2 mb-1 hover:ml-3 cursor-pointer transition-all"
-            >
-              RPC Package
-            </li>
-            <li
-              ref={videoNavRef}
-              onClick={handleVideoScroll}
-              className="ml-2 hover:ml-3 cursor-pointer transition-all"
-            >
-              Video Service
-            </li>
-          </ul>
+      {isMobile && (
+        <NoonMobileNavigation
+          internalsRef={internalsRef}
+          mediaRef={mediaRef}
+          searchRef={searchRef}
+          relayRef={relayRef}
+          RPCRef={RPCRef}
+          videoRef={videoRef}
+          clientRef={clientRef}
+          RTKRef={RTKRef}
+          videoBridgeRef={videoBridgeRef}
+          dependenciesRef={dependenciesRef}
+        />
+      )}
 
-          <ul className="my-4">
-            <li
-              ref={clientNavRef}
-              onClick={handleClientScroll}
-              className="text-xl rajdhani-semi-bold hover:ml-1 cursor-pointer transition-all"
-            >
-              Client
-            </li>
-            <li
-              ref={RTKNavRef}
-              onClick={handleRTKScroll}
-              className="ml-2 mb-1 hover:ml-3 cursor-pointer transition-all"
-            >
-              RTK Store
-            </li>
-            <li
-              ref={videoBridgeNavRef}
-              onClick={handleVideoBridgeScroll}
-              className="ml-2 mb-1 hover:ml-3 cursor-pointer transition-all"
-            >
-              Videobridge2 Connection
-            </li>
-          </ul>
+      <div className={isMobile ? 'flex flex-col' : 'flex flex-row'}>
+        {!isMobile && (
+          <NoonNavigation
+            internalsRef={internalsRef}
+            mediaRef={mediaRef}
+            searchRef={searchRef}
+            relayRef={relayRef}
+            RPCRef={RPCRef}
+            videoRef={videoRef}
+            clientRef={clientRef}
+            RTKRef={RTKRef}
+            videoBridgeRef={videoBridgeRef}
+            dependenciesRef={dependenciesRef}
+          />
+        )}
 
-          <ul className="my-4">
-            <li
-              ref={dependenciesNavRef}
-              onClick={handleDependenciesScroll}
-              className="rajdhani-semi-bold hover:ml-1 cursor-pointer transition-all"
-            >
-              Dependencies
-            </li>
-          </ul>
-        </div>
-        <div className="w-5/6 flex flex-col items-start justify-center  mb-16 ml-2">
-          <div className=" flex flex-col items-start rajdhani-light text-th-primary-medium">
+        <div
+          className={
+            'flex flex-col items-start justify-start max-w-4xl 2xl:max-w-4xl mx-auto mb-16  ' +
+            (isMobile ? 'w-5/6' : 'w-5/6 ')
+          }
+        >
+          <div className=" flex flex-col items-start rajdhani-light text-th-primary-medium ">
             <h1 className="mb-4 text-3xl tracking-tight md:text-6xl">
               <a
                 className="underline flex items-center justify-center transform hover:scale-[1.01] hover:ml-1 transition-all text-th-primary-dark"
