@@ -17,7 +17,7 @@ export default function Home() {
             </h1>
 
             <h2 className="text-th-primary-dark mb-4">
-              Full Stack Developer, Visual/Audio creator.
+              Full stack developer, visual/audio creator.
             </h2>
 
             <p className="text-th-primary-dark mb-8 md:mb-16">

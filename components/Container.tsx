@@ -68,8 +68,14 @@ export default function Container(props) {
         )}
       </Head>
 
-      <div className="flex flex-col relative items-start justify-start max-w-4xl 2xl:max-w-4xl mx-auto mb-10 w-full px-8 md:px-0">
-        <nav className="flex items-center justify-between w-full  border-gray-200 dark:border-gray-700  pt-8 pb-4 sm:pb-16 bg-opacity-60 ">
+      <div
+        id="scr"
+        className="flex flex-col relative items-start justify-start max-w-4xl 2xl:max-w-4xl mx-auto mb-10 w-full px-8 md:px-0"
+      >
+        <nav
+          id="scr2"
+          className="flex items-center justify-between w-full  border-gray-200 dark:border-gray-700  pt-8 pb-4 sm:pb-16 bg-opacity-60 "
+        >
           <a href="#skip" className="skip-nav">
             Skip to content
           </a>
