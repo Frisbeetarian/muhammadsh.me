@@ -92,12 +92,7 @@ export default function Noon() {
           />
         )}
 
-        <div
-          className={
-            'flex flex-col items-start justify-start max-w-4xl 2xl:max-w-4xl mx-auto mb-16  ' +
-            (isMobile ? 'w-5/6' : 'w-5/6 ')
-          }
-        >
+        <div className="flex flex-col items-start justify-start max-w-4xl 2xl:max-w-4xl mx-auto mb-16 w-5/6 md:pr-12">
           <div className=" flex flex-col items-start rajdhani-light text-th-primary-medium ">
             <h1 className="mb-4 text-3xl tracking-tight md:text-6xl">
               <a

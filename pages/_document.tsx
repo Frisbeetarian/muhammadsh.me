@@ -23,11 +23,13 @@ export default function Document(props) {
           sizes="16x16"
           type="image/png"
         />
+
         <link
           color="#4a9885"
           href="/static/favicons/safari-pinned-tab.svg"
           rel="mask-icon"
         />
+
         <meta content="#ffffff" name="theme-color" />
         <meta content="#ffffff" name="msapplication-TileColor" />
         <meta
@@ -44,7 +46,7 @@ export default function Document(props) {
           name="robots"
         />
       </Head>
-      <body className="bg-th-background  text-white dark:text-black">
+      <body className="bg-th-background text-white dark:text-black">
         <Main />
         <NextScript />
       </body>

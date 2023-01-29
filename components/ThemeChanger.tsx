@@ -132,7 +132,7 @@ const ThemeChanger = () => {
   if (!mounted) return null;
 
   return (
-    <div className="p-8 flex justify-between items-center font-bold text-xl">
+    <div className="-mr-2 flex justify-between items-center font-bold text-xl">
       <button
         aria-label="Toggle Dark Mode"
         type="button"

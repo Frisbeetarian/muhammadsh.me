@@ -182,7 +182,7 @@ function NoonMobileNavigation({
 
   return (
     <div
-      className="flex w-11/12 justify-center p-4 bg-gray-900 fixed bottom-0 z-50 text-sm"
+      className="flex w-11/12 justify-center p-4 bg-th-background  border-t-2 fixed bottom-0 z-50 text-sm text-th-primary-medium"
       style={
         hideNav ? { opacity: 0, zIndex: '-1' } : { opacity: 1, zIndex: '50' }
       }
