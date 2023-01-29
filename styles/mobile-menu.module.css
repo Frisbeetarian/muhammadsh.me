@@ -17,14 +17,15 @@
 
 .burger svg[data-hide='true'] {
   opacity: 0;
-  transform: translate(-50%, -50%) scale(0);
+  transform: translate(-50%, -50%) scale(3) rotate(333deg);
 }
 
 .menu {
-  padding: 0 28px 0 4px;
+  position: absolute;
+  padding: 0 28px 0 28px;
   margin: 0;
   padding-top: 24px;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   z-index: 1000;
   opacity: 0;

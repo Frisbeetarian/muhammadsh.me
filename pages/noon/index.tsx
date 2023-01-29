@@ -9,23 +9,15 @@ export default function Noon() {
 
   // const [searchValue, setSearchValue] = useState('');
   const internalsRef = useRef(null);
-
   const mediaRef = useRef(null);
-
   const searchRef = useRef(null);
-
   const relayRef = useRef(null);
-
   const RPCRef = useRef(null);
-
+  const neo4jRef = useRef(null);
   const videoRef = useRef(null);
-
   const clientRef = useRef(null);
-
   const RTKRef = useRef(null);
-
   const videoBridgeRef = useRef(null);
-
   const dependenciesRef = useRef(null);
 
   useEffect(() => {
@@ -68,6 +60,7 @@ export default function Noon() {
           searchRef={searchRef}
           relayRef={relayRef}
           RPCRef={RPCRef}
+          neo4jRef={neo4jRef}
           videoRef={videoRef}
           clientRef={clientRef}
           RTKRef={RTKRef}
@@ -84,6 +77,7 @@ export default function Noon() {
             searchRef={searchRef}
             relayRef={relayRef}
             RPCRef={RPCRef}
+            neo4jRef={neo4jRef}
             videoRef={videoRef}
             clientRef={clientRef}
             RTKRef={RTKRef}
@@ -494,168 +488,120 @@ export default function Noon() {
                 </p>
               </li>
 
-              {/*              <li className="mb-4">*/}
-              {/*                <h4 className="w-full mb-2 text-lg md:text-xl">*/}
-              {/*                  <a*/}
-              {/*                    className="underline flex items-center transform hover:scale-[1.01] hover:ml-2 transition-all text-th-primary-dark"*/}
-              {/*                    href="https://github.com/Frisbeetarian/noon-rabbit-mq-rpc"*/}
-              {/*                    target="_blank"*/}
-              {/*                    rel="noopener noreferrer"*/}
-              {/*                  >*/}
-              {/*                    The Neo4j Service*/}
-              {/*                    <Image*/}
-              {/*                      className="text-white bg-white rounded ml-3"*/}
-              {/*                      width="16"*/}
-              {/*                      height="16"*/}
-              {/*                      src="/external-link.svg"*/}
-              {/*                      alt="external link icon"*/}
-              {/*                    />*/}
-              {/*                  </a>*/}
-              {/*                </h4>*/}
+              <li ref={neo4jRef} className="mb-4">
+                <h4 className="w-full mb-2 text-lg md:text-xl">
+                  <a
+                    className="underline flex items-center transform hover:scale-[1.01] hover:ml-2 transition-all text-th-primary-dark"
+                    href="https://github.com/Frisbeetarian/noon-rabbit-mq-rpc"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    The Neo4j Service
+                    <Image
+                      className="text-white bg-white rounded ml-3"
+                      width="16"
+                      height="16"
+                      src="/external-link.svg"
+                      alt="external link icon"
+                    />
+                  </a>
+                </h4>
+              </li>
 
-              {/*                <p className="ml-4 mb-4">*/}
-              {/*                  Lets take an example where one user is attempting to add*/}
-              {/*                  another user as a friend. After searching for that specific*/}
-              {/*                  user and getting the ES results, a friend request is sent:*/}
-              {/*                  <CodeBlock*/}
-              {/*                    code={`await sendFriendRequest({*/}
-              {/*  variables: {*/}
-              {/*    profileUuid: profile.uuid,*/}
-              {/*  },*/}
-              {/*})`}*/}
-              {/*                  ></CodeBlock>*/}
-              {/*                  where `profileUuid` is the uuid of the profile who is going to*/}
-              {/*                  receive the friend request. The resolver receives the request*/}
-              {/*                  and calls the graph API with sender and receiver details. The*/}
-              {/*                  method then initiates the following Cypher query:*/}
-              {/*                  <CodeBlock*/}
-              {/*                    code={`tx.run(*/}
-              {/*  MATCH (p1:Profile {uuid: $sUuid}) */}
-              {/*  MATCH (p2:Profile {uuid: $rUuid}) */}
-              {/*  MERGE (p1)-[friendRequest:FRIEND_REQUEST */}
-              {/*  {uuid: $recipientProfileUuid, username: $recipientProfileUsername }]->(p2) */}
-              {/*  RETURN p1, friendRequest, p2,*/}
-              {/*  {*/}
-              {/*    sUuid: senderProfileUuid,*/}
-              {/*    rUuid: recipientProfileUuid,*/}
-              {/*    recipientProfileUuid,*/}
-              {/*    recipientProfileUsername,*/}
-              {/*  }*/}
-              {/*)`}*/}
-              {/*                  ></CodeBlock>*/}
-              {/*                  A FRIEND_REQUEST relationship is created, going from profile1*/}
-              {/*                  to profile2, between the two profiles and the details of the*/}
-              {/*                  receiving profile added to the relationship in order to easily*/}
-              {/*                  identify who that relationship is targeting. The receiving*/}
-              {/*                  profile then receives the request and can either deny or*/}
-              {/*                  accept the friend request. If accepted, an acceptFriendRequest*/}
-              {/*                  request is sent:*/}
-              {/*                  <CodeBlock*/}
-              {/*                    code={`await acceptFriendRequest({*/}
-              {/*  variables: {*/}
-              {/*    profileUuid: from,*/}
-              {/*  },*/}
-              {/*})`}*/}
-              {/*                  />*/}
-              {/*                  Where `from` is the uuid of the profile who originally sent*/}
-              {/*                  the friend request. We get that uuid from the Socketio*/}
-              {/*                  payload. The resolver receives the request and then calls the*/}
-              {/*                  graph api to create that relationship:*/}
-              {/*                  <CodeBlock*/}
-              {/*                    code={`*/}
-              {/*tx.run(*/}
-              {/*  Match (p1:Profile {uuid: $sUuid})  */}
-              {/*  Match (p2:Profile {uuid: $rUuid}) */}
-              {/*  Merge (p1)-[friends:FRIENDS */}
-              {/*  {uuid: $recipientProfileUuid, username: $recipientProfileUsername }]->(p2) */}
-              {/*  Merge (p2)-[:FRIENDS {uuid: $senderProfileUuid, username: $senderProfileUsername }]->(p1) */}
-              {/*  WITH p1, friends, p2 */}
-              {/*  Match (p1)-[fr:FRIEND_REQUEST]->(p2) */}
-              {/*  DELETE fr */}
-              {/*  RETURN p1, friends, p2,*/}
-              {/*  {*/}
-              {/*    sUuid: senderProfileUuid,*/}
-              {/*    rUuid: recipientProfileUuid,*/}
-              {/*    recipientProfileUuid,*/}
-              {/*    recipientProfileUsername,*/}
-              {/*    senderProfileUsername,*/}
-              {/*    senderProfileUuid,*/}
-              {/*  }*/}
-              {/*)*/}
-              {/*`}*/}
-              {/*                  />*/}
-              {/*                  The cypher query creates a bi-directional relationship of*/}
-              {/*                  FRIENDS between the two profiles and then deletes the existing*/}
-              {/*                  FRIEND_REQUEST relationship that they have between them. The*/}
-              {/*                  method responsible for calling the graph method then receives*/}
-              {/*                  a response, creates a conversation object and responds with*/}
-              {/*                  the conversation object. The user accepting the friend request*/}
-              {/*                  then receives the response, updates the store and emits an*/}
-              {/*                  event to the user who requested the friendship that the*/}
-              {/*                  request has been accepted. The user who initiated the*/}
-              {/*                  friendship then receives the socket event and also updates the*/}
-              {/*                  store with the conversation. A new conversation is created for*/}
-              {/*                  both users and they are now able to converse.*/}
-              {/*                </p>*/}
+              <p className="ml-4 mb-4">
+                Lets take an example where one user is attempting to add another
+                user as a friend. After searching for that specific user and
+                getting the ES results, a friend request is sent:
+              </p>
 
-              {/*                <CodeBlock*/}
-              {/*                  code={`MATCH (p:Profile) */}
-              {/*OPTIONAL MATCH (p)-[friends:FRIENDS]->(o)*/}
-              {/*OPTIONAL MATCH (p)-[friendRequest:FRIEND_REQUEST]->(i)*/}
-              {/*OPTIONAL MATCH (p)<-[friendRequestReverse:FRIEND_REQUEST]-(m)*/}
-              {/*return friends, p, friendRequest, i, friendRequestReverse, m`}*/}
-              {/*                ></CodeBlock>*/}
-              {/*                /!*<pre className="">*!/*/}
-              {/*                /!*  <code className="language-typescript javascript js">*!/*/}
-              {/*                /!*    {`const variable = 'raw';`}*!/*/}
-              {/*                /!*  </code>*!/*/}
-              {/*                /!*</pre>*!/*/}
+              <CodeBlock
+                code={`await sendFriendRequest({
+                variables: {
+                  profileUuid: profile.uuid,
+                },
+              })`}
+              ></CodeBlock>
+              <p>
+                where `profileUuid` is the uuid of the profile who is going to
+                receive the friend request. The resolver receives the request
+                and calls the graph API with sender and receiver details. The
+                method then initiates the following Cypher query:
+              </p>
 
-              {/*                <p className="ml-4 mb-4">*/}
-              {/*                  <span className="text-black dark:text-white ">*/}
-              {/*                    The client module:*/}
-              {/*                  </span>*/}
-              {/*                  This module is responsible for sending messages to queues. It*/}
-              {/*                  allows the microservices to make requests to other*/}
-              {/*                  microservices by sending a message to a specific queue. The*/}
-              {/*                  message contains the information needed for the other service*/}
-              {/*                  to process the request, such as the method to be called and*/}
-              {/*                  any necessary parameters.*/}
-              {/*                </p>*/}
-
-              {/*                <p className="ml-4 mb-4">*/}
-              {/*                  <span className="text-black dark:text-white">*/}
-              {/*                    The server module:*/}
-              {/*                  </span>*/}
-              {/*                  This module listens to the queues and responds to the messages*/}
-              {/*                  by sending ACKs (acknowledgements) to the corresponding*/}
-              {/*                  queues. The ACKs contain the results of the requested*/}
-              {/*                  operation or any errors that may have occurred.*/}
-              {/*                </p>*/}
-
-              {/*                <p className="ml-4 mb-4">*/}
-              {/*                  Both the client and server modules use RabbitMQ as the message*/}
-              {/*                  broker and AMQP protocol to communicate. The package is*/}
-              {/*                  designed to be lightweight and easy to use, making it simple*/}
-              {/*                  to add new microservices and to communicate between them.*/}
-              {/*                </p>*/}
-
-              {/*                <p className="ml-4 mb-4">*/}
-              {/*                  Additionally, the package utilizes the amqp-connection-manager*/}
-              {/*                  package which enables retries and timeouts. If the broker is*/}
-              {/*                  not able to respond within the specified time, the package*/}
-              {/*                  will retry the request after a certain interval of time. This*/}
-              {/*                  feature makes the Noon RPC package more robust and*/}
-              {/*                  fault-tolerant.*/}
-              {/*                </p>*/}
-
-              {/*                <p className="ml-4 mb-4">*/}
-              {/*                  Overall, the Noon RPC package allows for decoupled and*/}
-              {/*                  efficient communication between the microservices, enabling*/}
-              {/*                  them to work together seamlessly and providing a smooth and*/}
-              {/*                  responsive user experience.*/}
-              {/*                </p>*/}
-              {/*              </li>*/}
+              <CodeBlock
+                code={`tx.run(
+                MATCH (p1:Profile {uuid: $sUuid}) 
+                MATCH (p2:Profile {uuid: $rUuid}) 
+                MERGE (p1)-[friendRequest:FRIEND_REQUEST 
+                {uuid: $recipientProfileUuid, username: $recipientProfileUsername }]->(p2) 
+                RETURN p1, friendRequest, p2,
+                {
+                  sUuid: senderProfileUuid,
+                  rUuid: recipientProfileUuid,
+                  recipientProfileUuid,
+                  recipientProfileUsername,
+                }
+              )`}
+              />
+              <p>
+                A FRIEND_REQUEST relationship is created, going from profile1 to
+                profile2, between the two profiles and the details of the
+                receiving profile added to the relationship in order to easily
+                identify who that relationship is targeting. The receiving
+                profile then receives the request and can either deny or accept
+                the friend request. If accepted, an acceptFriendRequest request
+                is sent:
+              </p>
+              <CodeBlock
+                code={`await acceptFriendRequest({
+                variables: {
+                  profileUuid: from,
+                },
+              })`}
+              />
+              <p>
+                Where `from` is the uuid of the profile who originally sent the
+                friend request. We get that uuid from the Socketio payload. The
+                resolver receives the request and then calls the graph api to
+                create that relationship:
+              </p>
+              <CodeBlock
+                code={`
+              tx.run(
+                Match (p1:Profile {uuid: $sUuid})  
+                Match (p2:Profile {uuid: $rUuid}) 
+                Merge (p1)-[friends:FRIENDS 
+                {uuid: $recipientProfileUuid, username: $recipientProfileUsername }]->(p2) 
+                Merge (p2)-[:FRIENDS {uuid: $senderProfileUuid, username: $senderProfileUsername }]->(p1) 
+                WITH p1, friends, p2 
+                Match (p1)-[fr:FRIEND_REQUEST]->(p2) 
+                DELETE fr 
+                RETURN p1, friends, p2,
+                {
+                  sUuid: senderProfileUuid,
+                  rUuid: recipientProfileUuid,
+                  recipientProfileUuid,
+                  recipientProfileUsername,
+                  senderProfileUsername,
+                  senderProfileUuid,
+                }
+              )
+              `}
+              />
+              <p>
+                The cypher query creates a bi-directional relationship of
+                FRIENDS between the two profiles and then deletes the existing
+                FRIEND_REQUEST relationship that they have between them. The
+                method responsible for calling the graph method then receives a
+                response, creates a conversation object and responds with the
+                conversation object. The user accepting the friend request then
+                receives the response, updates the store and emits an event to
+                the user who requested the friendship that the request has been
+                accepted. The user who initiated the friendship then receives
+                the socket event and also updates the store with the
+                conversation. A new conversation is created for both users and
+                they are now able to converse.
+              </p>
 
               <li ref={videoRef} className="mb-4">
                 <h4 className="w-full mb-2 text-lg  md:text-xl">
@@ -694,6 +640,7 @@ export default function Noon() {
                   with any necessary dependencies, such as Prosody, an XMPP
                   server used for signaling in the Jitsi platform.
                 </p>
+
                 <p className="ml-2 md:ml-4 mb-4">
                   To secure the Jitsi platform, several measures were taken. A
                   valid SSL certificate was obtained and configured for the

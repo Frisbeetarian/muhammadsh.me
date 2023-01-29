@@ -6,6 +6,7 @@ function NoonNavigation({
   searchRef,
   relayRef,
   RPCRef,
+  neo4jRef,
   videoRef,
   clientRef,
   RTKRef,
@@ -17,6 +18,7 @@ function NoonNavigation({
   const searchNavRef = useRef(null);
   const relayNavRef = useRef(null);
   const RPCNavRef = useRef(null);
+  const neo4jNavRef = useRef(null);
   const videoNavRef = useRef(null);
   const clientNavRef = useRef(null);
   const RTKNavRef = useRef(null);
@@ -142,6 +144,10 @@ function NoonNavigation({
     RPCRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const handleNeo4jScroll = () => {
+    neo4jRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   const handleVideoScroll = () => {
     videoRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -199,6 +205,14 @@ function NoonNavigation({
           className="ml-2 mb-1 hover:ml-3 cursor-pointer transition-all"
         >
           RPC Package
+        </li>
+
+        <li
+          ref={neo4jNavRef}
+          onClick={handleNeo4jScroll}
+          className="ml-2 mb-1 hover:ml-3 cursor-pointer transition-all"
+        >
+          Neo4j Service
         </li>
         <li
           ref={videoNavRef}

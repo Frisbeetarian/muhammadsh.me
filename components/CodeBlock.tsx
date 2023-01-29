@@ -11,7 +11,7 @@ export default function CodeBlock({ code }) {
   }).value;
 
   return (
-    <pre className="ml-4 mb-4 mt-4 w-5/6">
+    <pre className="ml-4 mb-4 mt-4 text-sm md:text-md max-w-xs md:max-w-2xl">
       <code dangerouslySetInnerHTML={{ __html: myHtml }} />
     </pre>
   );

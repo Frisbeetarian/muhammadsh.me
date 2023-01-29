@@ -6,6 +6,7 @@ function NoonMobileNavigation({
   searchRef,
   relayRef,
   RPCRef,
+  neo4jRef,
   videoRef,
   clientRef,
   RTKRef,
@@ -17,6 +18,7 @@ function NoonMobileNavigation({
   const searchNavRef = useRef(null);
   const relayNavRef = useRef(null);
   const RPCNavRef = useRef(null);
+  const neo4jNavRef = useRef(null);
   const videoNavRef = useRef(null);
   const clientNavRef = useRef(null);
   const RTKNavRef = useRef(null);
@@ -159,6 +161,9 @@ function NoonMobileNavigation({
   const handleRPCScroll = () => {
     RPCRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
+  const handleNeo4jScroll = () => {
+    neo4jRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
 
   const handleVideoScroll = () => {
     videoRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -182,12 +187,12 @@ function NoonMobileNavigation({
 
   return (
     <div
-      className="flex w-11/12 justify-center p-4 bg-th-background  border-t-2 fixed bottom-0 z-50 text-sm text-th-primary-medium"
+      className="flex  w-full justify-center p-4 bg-th-background  border-t-2 fixed bottom-0 z-50 text-sm text-th-primary-medium"
       style={
         hideNav ? { opacity: 0, zIndex: '-1' } : { opacity: 1, zIndex: '50' }
       }
     >
-      <ul className="animate transition-all mb-1   flex-1 ">
+      <ul className="animate transition-all mb-1 w-1/3 mr-11">
         <li
           ref={internalsNavRef}
           onClick={handleInternalsScroll}
@@ -224,6 +229,14 @@ function NoonMobileNavigation({
           RPC Package
         </li>
         <li
+          ref={neo4jNavRef}
+          onClick={handleNeo4jScroll}
+          className="ml-2 mb-1 hover:ml-3 cursor-pointer transition-all mb-1"
+        >
+          Neo4j Service
+        </li>
+
+        <li
           ref={videoNavRef}
           onClick={handleVideoScroll}
           className="ml-2 hover:ml-3 cursor-pointer transition-all mb-1"
@@ -232,7 +245,7 @@ function NoonMobileNavigation({
         </li>
       </ul>
 
-      <ul className=" animate transition-all mb-1  flex-1">
+      <ul className=" animate transition-all mb-1  w-1/3 ml-11">
         <li
           ref={clientNavRef}
           onClick={handleClientScroll}

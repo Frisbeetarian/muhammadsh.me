@@ -45,7 +45,7 @@ export default function MobileMenu() {
         <ul
           className={cn(
             styles.menu,
-            'flex flex-col absolute bg-th-background',
+            'flex flex-col  bg-th-background',
             isMenuRendered && styles.menuRendered
           )}
         >
@@ -53,33 +53,109 @@ export default function MobileMenu() {
             className="border-b border-gray-300 dark:border-gray-700  text-sm font-semibold"
             style={{ transitionDelay: '150ms' }}
           >
-            <Link href="/" className="flex w-auto pb-4">
-              Home
+            <Link href="/" className="flex justify-between w-auto pb-4">
+              <p>Home</p>
+              <p>we were</p>
             </Link>
           </li>
           <li
             className="border-b border-gray-300 dark:border-gray-700  text-sm font-semibold"
             style={{ transitionDelay: '175ms' }}
           >
-            <Link href="/noon" className="flex w-auto pb-4">
-              Noon
+            <Link href="/noon" className="flex justify-between w-auto pb-4">
+              <p>Noon</p>
+              <p>never meant</p>
             </Link>
           </li>
           <li
             className="border-b border-gray-300 dark:border-gray-700  text-sm font-semibold"
             style={{ transitionDelay: '200ms' }}
           >
-            <Link href="/visuals" className="flex w-auto pb-4">
-              Visuals
+            <Link href="/visuals" className="flex justify-between w-auto pb-4">
+              <p>Visuals</p>
+              <p>to crawl in</p>
             </Link>
           </li>
           <li
             className="border-b border-gray-300 dark:border-gray-700  text-sm font-semibold"
             style={{ transitionDelay: '250ms' }}
           >
-            <Link href="/audio" className="flex w-auto pb-4">
-              Audio
+            <Link href="/audio" className="flex justify-between w-auto pb-4">
+              <p>Audio</p>
+              <p>for the bait</p>
             </Link>
+          </li>
+
+          <li
+            className="  text-sm font-semibold"
+            style={{ transitionDelay: '250ms' }}
+          >
+            <a
+              className="flex justify-end w-auto pb-4"
+              href="https://www.youtube.com/watch?v=A_UFawnJwOc"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <p>we never will</p>
+            </a>
+          </li>
+
+          {/*<li*/}
+          {/*  className="  text-sm font-semibold"*/}
+          {/*  style={{ transitionDelay: '250ms' }}*/}
+          {/*>*/}
+          {/*  <Link href="/audio" className="flex justify-end w-auto pb-4">*/}
+          {/*    <p>for the bait</p>*/}
+          {/*  </Link>*/}
+          {/*</li>*/}
+          <li
+            className="  text-sm font-semibold"
+            style={{ transitionDelay: '250ms' }}
+          >
+            {/*<Link href="/audio" className="flex justify-end w-auto pb-4">*/}
+            {/*  <p>hey</p>*/}
+            {/*</Link>*/}
+
+            <a
+              className="flex justify-end w-auto pb-4"
+              href="https://www.youtube.com/watch?v=YjNytMN4QL0"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <p>hey</p>
+            </a>
+          </li>
+
+          <li
+            className="  text-sm font-semibold"
+            style={{ transitionDelay: '250ms' }}
+          >
+            {/*<Link href="/audio" className="flex justify-end w-auto pb-4">*/}
+            {/*  <p>im not</p>*/}
+            {/*</Link>*/}
+
+            <a
+              className="flex justify-end w-auto pb-4"
+              href="https://www.youtube.com/watch?v=i0gn23i-DSA"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <p>im not</p>
+            </a>
+          </li>
+
+          <li
+            className="  text-sm font-semibold"
+            style={{ transitionDelay: '250ms' }}
+          >
+            <a
+              className="flex justify-end w-auto pb-4"
+              href="https://www.youtube.com/watch?v=01rfm5Hs8vc"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <p>synthetica</p>
+            </a>
           </li>
 
           {/*<li*/}
