@@ -277,7 +277,7 @@ export default function Noon() {
               maintainability. The microservices include:
             </p>
 
-            <ul className="mb-4 ml-4">
+            <ul className="mb-4 ml-2 md:ml-4">
               <li ref={mediaRef} className="mb-4">
                 <h4 className="w-full mb-2 text-lg md:text-xl">
                   <a
@@ -297,7 +297,7 @@ export default function Noon() {
                   </a>
                 </h4>
 
-                <p className="ml-4 mb-4">
+                <p className="ml-2 md:ml-4 mb-4">
                   This service is implemented using JavaScript, with Nodejs as
                   the runtime environment and Express to serve the static media
                   content. The media microservice is responsible for handling
@@ -306,12 +306,12 @@ export default function Noon() {
                   handle all image related data.
                 </p>
 
-                <p className="ml-4 mb-4">
+                <p className="ml-2 md:ml-4 mb-4">
                   All media is written to the file system of the virtual private
                   server (VPS) where the microservice exists.
                 </p>
 
-                <p className="ml-4 mb-4">
+                <p className="ml-2 md:ml-4 mb-4">
                   I have defined routes that correspond to the URLs where the
                   media files are stored. When a user requests a media file by
                   accessing the corresponding URL, Express intercepts the
@@ -321,7 +321,7 @@ export default function Noon() {
                   media.
                 </p>
 
-                {/*<p className="ml-4 mb-4">*/}
+                {/*<p className="ml-2 md:ml-4 mb-4">*/}
                 {/*  By using Express to handle the serving of static media files, I*/}
                 {/*  can easily control access to the files by adding authentication*/}
                 {/*  and access control middlewares. This ensures that only authorized*/}
@@ -332,13 +332,13 @@ export default function Noon() {
                 {/*  the server.*/}
                 {/*</p>*/}
 
-                <p className="ml-4 mb-4">
+                <p className="ml-2 md:ml-4 mb-4">
                   In order to more easily adjust the size of the VPS to handle
                   increases in load, I am planning to containerize the media
                   microservice using Docker.
                 </p>
 
-                <p className="ml-4 mb-4">
+                <p className="ml-2 md:ml-4 mb-4">
                   Once the media microservice is containerized, I plan on using
                   Kubernetes to manage the deployment and scaling of the
                   service. This will allow me to easily adjust the size of the
@@ -346,7 +346,7 @@ export default function Noon() {
                   replicas of the container.
                 </p>
 
-                <p className="ml-4 mb-4">
+                <p className="ml-2 md:ml-4 mb-4">
                   To protect media access, I have used nginx as a reverse proxy.
                   By using nginx as a reverse proxy, I can control access to the
                   media by setting up authentication and access control. This
@@ -355,7 +355,7 @@ export default function Noon() {
                   breaches.
                 </p>
 
-                <p className="ml-4 mb-4">
+                <p className="ml-2 md:ml-4 mb-4">
                   Overall, by using Express in conjunction with other
                   technologies such as Sharp and Nginx, I have created a
                   powerful and scalable media microservice that can handle a
@@ -384,7 +384,7 @@ export default function Noon() {
                   </a>
                 </h4>
 
-                <p className="ml-4">
+                <p className="ml-2 md:ml-4 mb-4">
                   This service is built using Elasticsearch and is responsible
                   for providing powerful search functionality for the
                   application. Like other design decisions pertaining to the
@@ -421,7 +421,7 @@ export default function Noon() {
                   </a>
                 </h4>
 
-                <p className="ml-4">
+                <p className="ml-2 md:ml-4 mb-4">
                   This service is built using Javascript and is responsible for
                   relaying emails and notifications to the users of Noon.
                 </p>
@@ -446,14 +446,14 @@ export default function Noon() {
                   </a>
                 </h4>
 
-                <p className="ml-4 mb-4">
+                <p className="ml-2 md:ml-4 mb-4">
                   The remote procedure call (RPC) package is a custom-built
                   package written in Typescript that handles all communication
                   between the microservices. It has two main modules: the client
                   module and the server module.
                 </p>
 
-                <p className="ml-4 mb-4">
+                <p className="ml-2 md:ml-4 mb-4">
                   <span className="text-black dark:text-white">
                     The client module:
                   </span>
@@ -465,7 +465,7 @@ export default function Noon() {
                   any necessary parameters.
                 </p>
 
-                <p className="ml-4 mb-4">
+                <p className="ml-2 md:ml-4 mb-4">
                   <span className="text-black dark:text-white">
                     The server module:
                   </span>
@@ -475,14 +475,14 @@ export default function Noon() {
                   operation or any errors that may have occurred.
                 </p>
 
-                <p className="ml-4 mb-4">
+                <p className="ml-2 md:ml-4 mb-4">
                   Both the client and server modules use RabbitMQ as the message
                   broker and AMQP protocol to communicate. The package is
                   designed to be lightweight and easy to use, making it simple
                   to add new microservices and to communicate between them.
                 </p>
 
-                <p className="ml-4 mb-4">
+                <p className="ml-2 md:ml-4 mb-4">
                   Additionally, the package utilizes the amqp-connection-manager
                   package which enables retries and timeouts. If the broker is
                   not able to respond within the specified time, the package
@@ -491,7 +491,7 @@ export default function Noon() {
                   fault-tolerant.
                 </p>
 
-                <p className="ml-4 mb-4">
+                <p className="ml-2 md:ml-4 mb-4">
                   Overall, the Noon RPC package allows for decoupled and
                   efficient communication between the microservices, enabling
                   them to work together seamlessly and providing a smooth and
@@ -681,7 +681,7 @@ export default function Noon() {
                   </a>
                 </h4>
 
-                <p className="ml-4 mb-4">
+                <p className="ml-2 md:ml-4 mb-4">
                   Jitsi is an open-source video conferencing platform that was
                   chosen for its versatility and ease of deployment. The
                   platform is built on top of WebRTC, a technology that allows
@@ -691,7 +691,7 @@ export default function Noon() {
                   browser.
                 </p>
 
-                <p className="ml-4 mb-4">
+                <p className="ml-2 md:ml-4 mb-4">
                   To deploy Jitsi, a DigitalOcean droplet was provisioned and
                   configured. This droplet, or virtual private server, was set
                   up to run Ubuntu, the operating system recommended by Jitsi.
@@ -699,7 +699,7 @@ export default function Noon() {
                   with any necessary dependencies, such as Prosody, an XMPP
                   server used for signaling in the Jitsi platform.
                 </p>
-                <p className="ml-4 mb-4">
+                <p className="ml-2 md:ml-4 mb-4">
                   To secure the Jitsi platform, several measures were taken. A
                   valid SSL certificate was obtained and configured for the
                   Jitsi domain. Firewall rules were also set up to restrict
@@ -722,7 +722,7 @@ export default function Noon() {
                   {/*were promptly addressed.*/}
                 </p>
 
-                {/*<p className="ml-4 mb-4">*/}
+                {/*<p className="ml-2 md:ml-4 mb-4">*/}
                 {/*  In summary, Jitsi was chosen as the open-source video conferencing*/}
                 {/*  solution for its versatility and ease of deployment. A*/}
                 {/*  DigitalOcean droplet was provisioned and configured to deploy, run*/}
@@ -755,7 +755,7 @@ export default function Noon() {
               </h3>
             </div>
 
-            <p className="mb-4 ">
+            <p className="ml-2 md:ml-4 mb-4 ">
               The Noon web client is built as a Single Page Application (SPA),
               written in TypeScript using React and Next.js as the framework. It
               utilizes Redux Toolkit for state management. Real-time
@@ -773,13 +773,13 @@ export default function Noon() {
               the API, providing a smooth and responsive user experience.
             </p>
 
-            <p className="mb-4 ">
+            <p className="ml-2 md:ml-4 mb-4 ">
               The functionality of the client is split up into various
               components and utility functions, each responsible for a specific
               set of tasks.
             </p>
 
-            <p className="mb-4 ">
+            <p className="ml-2 md:ml-4 mb-4 ">
               All state in the application is managed using Redux/Redux Toolkit.
               RTK allows for a centralized and predictable state management.
               Sure, adding complexity (vuex/pinia {'>>'} redux, I will fight
@@ -789,7 +789,7 @@ export default function Noon() {
               simple state management.
             </p>
 
-            <p className="mb-4 ">
+            <p className="ml-2 md:ml-4 mb-4 ">
               RTK is used to store the logged-in user, to populate the
               conversations, and to update the conversations with the messages
               sent, amongst a myriad of other things. Additionally, I have also
@@ -818,12 +818,12 @@ export default function Noon() {
               </a>
             </h4>
 
-            <p className="ml-4 mb-4 ">
+            <p className="ml-2 md:ml-4 mb-4 ">
               The Noon store utilizes a number of different reducers to manage
               specific aspects of the application's state. Among which:
             </p>
 
-            <p className="ml-4 mb-4 ">
+            <p className="ml-2 md:ml-4 mb-4 ">
               <span className="text-th-primary-dark rajdhani-light">
                 Users reducer
               </span>
@@ -832,7 +832,7 @@ export default function Noon() {
               session tokens, and other user-specific data.
             </p>
 
-            <p className="ml-4 mb-4">
+            <p className="ml-2 md:ml-4 mb-4">
               <span className="text-th-primary-dark ">Profiles reducer</span>:
               is responsible for managing the list of profiles for friends and
               tracking friend requests, blocked/unfriended, etc. It also keeps
@@ -840,42 +840,42 @@ export default function Noon() {
               received friend requests from.
             </p>
 
-            <p className="ml-4 mb-4">
+            <p className="ml-2 md:ml-4 mb-4">
               <span className="text-th-primary-dark ">UI reducer</span>: is
               responsible for managing the state of the user interface,
               including managing the active navigation, displaying and hiding UI
               elements, and handling any UI-related errors or issues.
             </p>
 
-            <p className="ml-4 mb-4 ">
+            <p className="ml-2 md:ml-4 mb-4 ">
               <span className="text-th-primary-dark ">Chat reducer</span>: is
               responsible for instantiating and managing conversations, keeping
               track of active conversations, updating conversations with new
               messages, etc.
             </p>
 
-            <p className="ml-4 mb-4 ">
+            <p className="ml-2 md:ml-4 mb-4 ">
               <span className="text-th-primary-dark ">Search reducer</span>: is
               responsible for managing the search filters, which include setting
               and updating search queries, handling search results, and managing
               any search-related errors or issues.
             </p>
 
-            <p className="ml-4 mb-4 ">
+            <p className="ml-2 md:ml-4 mb-4 ">
               <span className="text-th-primary-dark ">Groups reducer</span>: is
               responsible for managing the state of groups, including creating
               new groups, updating existing groups, and handling any
               group-related errors or issues.
             </p>
 
-            <p className="ml-4 mb-4 ">
+            <p className="ml-2 md:ml-4 mb-4 ">
               <span className="text-th-primary-dark ">Video reducer</span>: is
               responsible for instantiating and managing video conversations,
               keeping track of their state, and handling any video-related
               errors or issues.
             </p>
 
-            <p className="ml-4 mb-4 ">
+            <p className="ml-2 md:ml-4 mb-4 ">
               <span className="text-th-primary-dark ">Files reducer</span>: is
               responsible for managing files, including uploading, downloading,
               and deleting files, and handling any file-related errors or
@@ -912,7 +912,7 @@ export default function Noon() {
               </a>
             </h4>
 
-            <p className="ml-4 mb-4">
+            <p className="ml-2 md:ml-4 mb-4">
               I integrated the Jitsi package into the client by using the Jitsi
               Meet SDK. The Noon Video component initializes the connection, via
               the React component provided by SDK, to Videobridge2 on the VPS
@@ -922,14 +922,14 @@ export default function Noon() {
               requested.
             </p>
 
-            <p className="mb-4">
+            <p className="ml-2 md:ml-4 mb-4">
               Overall, by building Noon as an SPA, I have created a smooth and
               responsive user experience while also providing the ability to
               later on learn and adopt React Native to build the mobile
               applications (a process which I have started a few weeks ago).
             </p>
 
-            <p className="mb-4">
+            <p className="ml-2 md:ml-4 mb-4">
               On build, a linting and verification process ensures that the code
               is free of any syntax or semantic errors before deployment. Vercel
               is used for deployment.

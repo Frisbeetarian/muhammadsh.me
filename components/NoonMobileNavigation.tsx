@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 function NoonMobileNavigation({
   internalsRef,
@@ -22,10 +22,28 @@ function NoonMobileNavigation({
   const RTKNavRef = useRef(null);
   const videoBridgeNavRef = useRef(null);
   const dependenciesNavRef = useRef(null);
+  const [hideNav, setHideNav] = useState(false);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const documentHeight = document.documentElement.scrollHeight;
+    // console.log('document height:', documentHeight);
+
+    if (scrollY + 1000 > documentHeight) {
+      // alert('FDSfds');
+      setHideNav(true);
+    }
     const onScroll = () => {
-      let scrollYLet = scrollY + 20;
+      const scrollYLet = scrollY + 20;
+      // console.log('document height on scroll:', documentHeight);
+
+      if (scrollY + 1500 > documentHeight) {
+        // alert('FDSfds');
+        setHideNav(true);
+      } else {
+        setHideNav(false);
+      }
+
       if (
         scrollYLet > internalsRef.current.offsetTop &&
         scrollYLet < mediaRef.current.offsetTop
@@ -163,7 +181,12 @@ function NoonMobileNavigation({
   };
 
   return (
-    <div className="flex w-11/12 justify-center p-4 bg-gray-900 fixed bottom-0 z-50 text-sm">
+    <div
+      className="flex w-11/12 justify-center p-4 bg-gray-900 fixed bottom-0 z-50 text-sm"
+      style={
+        hideNav ? { opacity: 0, zIndex: '-1' } : { opacity: 1, zIndex: '50' }
+      }
+    >
       <ul className="animate transition-all mb-1   flex-1 ">
         <li
           ref={internalsNavRef}
