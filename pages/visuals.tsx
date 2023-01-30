@@ -19,7 +19,7 @@ export default function Visuals() {
             UE4, I saw the potential of its powerful rendering capabilities and
             robust toolkit and used those to experiment with visuals. I love
             walking and listening to music and imagining visuals and images that
-            could accompany the music. Unreal enabled to translate those
+            could accompany the music. Unreal enabled me to translate those
             imaginings into concrete artistic expressions. Here are some of my
             visualizations:
           </p>
@@ -72,7 +72,7 @@ export default function Visuals() {
             Making heavy use of outline, color burn effects and a dynamic sky
             sphere. I placed a camera in an abandoned tower environment and
             moved it around the scene as I changed the intensity and settings of
-            the effects and the elements. Also love the track.
+            the effects and the elements.
           </p>
 
           <div className="flex w-full pl-2 mt-10 my-3">
@@ -136,7 +136,7 @@ export default function Visuals() {
             itself is a community map which we modified and added sections and
             elements to. We built the underground water caves and the
             environment after the camera exists the cave. We used UE4 visual
-            scripting system Blueprints and its camera controls system Sequences
+            scripting system Blueprints and its camera controls system Sequencer
             to add interactivity and control the position and movement of the
             elements at certain intervals.
           </p>

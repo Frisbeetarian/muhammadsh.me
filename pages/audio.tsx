@@ -10,7 +10,7 @@ export default function Audio() {
           </h1>
           <p className="mb-8">
             Going by the pseudonym 'سطوحي', I usually like to end my night by
-            rolling my face across my synth and midi controller to produce what
+            rolling my face across my synth and midi controller to create what
             could be called music. Emphasis on the{' '}
             <span className="rajdhani-semi-bold">could</span>.
           </p>
@@ -198,12 +198,37 @@ export default function Audio() {
             </div>
           </div>
 
+          <div className="w-full my-8 flex flex-col items-end">
+            <iframe
+              width="100%"
+              height="166"
+              allow="autoplay"
+              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1222551841&color=%23f80554&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+            ></iframe>
+            <div>
+              <a
+                href="https://soundcloud.com/mohamad-hoho"
+                title="سطوحي"
+                target="_blank"
+              >
+                سطوحي{' '}
+              </a>{' '}
+              <a
+                href="https://soundcloud.com/mohamad-hoho/bhtj6rm5a234"
+                title="إلى ربيعٍ أحمر"
+                target="_blank"
+              >
+                إلى ربيعٍ أحمر
+              </a>
+            </div>
+          </div>
+
           <div className="w-full flex justify-end">
             <a
               className="flex items-center mt-8 text-th-primary-dark leading-7 rounded-lg hover:text-gray-800 dark:hover:text-gray-200 transition-all h-6"
               target="_blank"
               rel="noopener noreferrer"
-              href="https://www.youtube.com/playlist?list=PLxVxxL4yicyb41Ug_wFyrzr7lWgazshj4"
+              href="https://soundcloud.com/mohamad-hoho"
             >
               Listen to my music (not responsible for ear damage nor the general
               revulsion that accompanies the experience)

@@ -88,7 +88,7 @@ export default function Container(props) {
             <NavItem href="/audio" text="Audio" />
           </div>
 
-          <ThemeChanger />
+          {/*<ThemeChanger />*/}
         </nav>
       </div>
 
