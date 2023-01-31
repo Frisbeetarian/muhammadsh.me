@@ -171,6 +171,7 @@ function NoonNavigation({
   return (
     <div className="sticky top-5 h-screen w-1/6 ">
       <ul className="animate transition-all">
+        <li className="text-xs ">(docs under construction)</li>
         <li
           ref={internalsNavRef}
           onClick={handleInternalsScroll}

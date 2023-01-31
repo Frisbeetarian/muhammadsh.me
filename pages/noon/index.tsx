@@ -113,24 +113,24 @@ export default function Noon() {
               communication and does not rely on any closed/non-open-source
               third party service or package for any of its functionality. The
               primary development objective that I had in mind when building the
-              platform was to see whether I could build all the systems required
-              by hand, while learning Typescript/Graphql/React in the process.
-              As for the systems that I'm too dumb to build or would require an
-              inordinate amount of time to develop (like properly functioning
-              video conferencing) I would solely rely on open source packages
-              and libraries. From authentication, to the real time
-              communication, to the presence system, etc... all would be built
-              by me or would be provided by established open source
-              packages/libraries. The only closed third parties that I would
-              have to rely on of course would be the infrastructure providers.
-              For this I went with Digital Ocean for the backend and its
-              microservices and Vercel for the client.
+              platform was to see whether I could build all the systems and the
+              overall infrastructure required by hand, while learning
+              Typescript/Graphql/React in the process. As for the systems that
+              I'm too dumb to build or would require an inordinate amount of
+              time to develop (like properly functioning video conferencing) I
+              would solely rely on open source packages and libraries. From
+              authentication, to the real time communication, to the presence
+              system, etc... all would be built by me or would be provided by
+              established open source packages/libraries. The only closed third
+              parties that I would have to rely on of course would be the
+              infrastructure providers. For this I went with Digital Ocean for
+              the backend and its microservices and Vercel for the client.
             </p>
 
             <p className="mb-4">
-              I started building the first version of Noon in 2018-2019 using
-              Laravel and Vuejs. I stopped working on it due obligations with
-              work, freelance projects and the country (I'm from Lebanon)
+              I started prototyping with the functionality of Noon in 2018-2019
+              using Laravel and Vuejs. I stopped working on it due obligations
+              with work, freelance projects and the country (I'm from Lebanon)
               absolutely going up in flames in late 2019. A severe economic
               crisis brought on by a ruling mafia that stole the Lebanese's
               savings. All my, and my parents savings were locked in the banks,
@@ -144,38 +144,57 @@ export default function Noon() {
             <p className="mb-4">
               I picked up work on it again early in 2022, this time deciding
               that since I was very much interested in learning
-              <code>React/Graphql/Typescript</code>
-              it would be a great opportunity to rebuild the platform using that
-              stack. And since I, at that point had 2 years of experience
-              maintaining and refactoring Myki's Nodejs backend which served
-              hundreds of thousands of active users, I would be able to take the
-              plunge and write the entire platform both backend and frontend
-              with JS/TS and use all the accompanying ecosystem of open source
-              packages.
+              React/Graphql/Typescript it would be a great opportunity to
+              continue on the platform using that stack. And since I, at that
+              point had the necessary experience with production JS having spent
+              the last 2 years maintaining and refactoring Myki's Nodejs backend
+              which served hundreds of thousands of active users, I took the
+              plunge and restarted development. I owe a considerable amount to{' '}
+              <a
+                className="underline text-white transform hover:scale-[1.01] hover:ml-1 transition-all text-th-primary-dark"
+                href="https://www.youtube.com/@bawad/videos"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Ben Awad
+              </a>{' '}
+              and his tutorials for helping me make sense of how to manoeuvre
+              the stack and ecosystem especially as it relates to everything
+              Graphql. I must have finished{' '}
+              <a
+                className="underline text-white transform hover:scale-[1.01] hover:ml-1 transition-all text-th-primary-dark"
+                href="https://www.youtube.com/watch?v=I6ypD7qv3Z8&t=49403s"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                his 14 hours full stack tutorial
+              </a>{' '}
+              4 times. The first 2 times because I didn't know what the fuck was
+              going on and was just following and writing along in semi zombie
+              mode.
             </p>
 
-            <p className="mb-4">Why you no use manage services?</p>
-
-            <p className="mb-4">
-              Aside from the security considerations of offloading communication
-              data to external providers whose servers are liable to get hacked,
-              for the fun of it I guess? For the longest time as a developer I
-              relied on abstraction on top of abstraction on top of helper
-              modules on top of libraries. Sure, this made it possible for me to
-              develop what was required of me to develop on time, but a feeling
-              persisted that I wasnt really aware of what was going on.
-            </p>
+            {/*<p className="mb-4">*/}
+            {/*  Aside from the security considerations of offloading communication*/}
+            {/*  data to external providers whose servers are liable to get hacked,*/}
+            {/*  for the fun of it I guess? For the longest time as a developer I*/}
+            {/*  relied on abstraction on top of abstraction on top of helper*/}
+            {/*  modules on top of libraries. Sure, this made it possible for me to*/}
+            {/*  develop what was required of me to develop on time, but a feeling*/}
+            {/*  persisted that I wasnt really aware of what was going on.*/}
+            {/*</p>*/}
 
             <p className="mb-4">
               Noon provides the features that people have come to expect from
               traditional communication and messaging platforms. From
               private/group chat, to media sharing in conversations, to video
               conferencing, etc... It is very much still in a very early stage
-              of development, about 60% to 65% done. All the vital components
-              are now functional; from the communication, authentication,
-              presence systems to the video conferencing. But still require a
-              shitload of refactoring, enhancements, optimizations and
-              debugging. The platform is live on
+              of development, about 60% to 65% done with a lot of work still to
+              be done on optimizing, refactoring and testing. Most the vital
+              components are functional; from the communication, authentication,
+              presence systems to the video conferencing. The main emphasis of
+              development as of 31-01-2022 is on implementing E2EE using
+              Signal's algorithm. The platform is live on{' '}
               <a
                 className="underline text-white transform hover:scale-[1.01] hover:ml-1 transition-all text-th-primary-dark"
                 href="https://noon.tube"
@@ -236,17 +255,14 @@ export default function Noon() {
             <p className="mb-4 ">
               The Noon backend is built using Node.js and Express for the
               server-side runtime environment and routing. It is mostly -
-              refactor into TS ongoing - written in
-              <a className="code">
-                <code className="code">TypeScript</code>
-              </a>
-              . It utilizes Apollo Client for handling GraphQL queries and
-              mutations, allowing for efficient and flexible data retrieval and
-              manipulation. Real-time functionality is implemented using
-              Socket.io for bi-directional communication between the client and
-              server. Redis, as well as being as a caching layer, is also being
-              used to store user sessions when users authenticate as well as
-              Socket.io sessions and messages. PostgreSQL is used as the primary
+              refactor into TS ongoing - written in TypeScript. It utilizes
+              Apollo Client for handling GraphQL queries and mutations, allowing
+              for efficient and flexible data retrieval and manipulation.
+              Real-time functionality is implemented using Socket.io for
+              bi-directional communication between the client and server. Redis,
+              as well as being as a caching layer, is also being used to store
+              user sessions when users authenticate as well as Socket.io
+              sessions and messages. PostgreSQL is used as the primary
               relational database for storing user and conferencing data. Neo4j
               is utilized for handling profile relationships, allowing for easy
               querying and traversal of complex social graphs. Elasticsearch is
@@ -383,11 +399,11 @@ export default function Noon() {
                   are also fairly practical and technical considerations
                   underpinning them, especially when it comes to scaling and how
                   it is associated to cost. My experience building similar
-                  systems has show me that while these managed services make it
+                  systems has shown me that while these managed services make it
                   easy to experiment and prototype, they actually hold a
-                  platform's growth back because their cost is significant.
-                  Eventually necessitating re-engineering and refactoring; by
-                  deploying a home grown solution.
+                  platform's growth back because the underlying cost of their
+                  use is significant. Eventually necessitating re-engineering
+                  and refactoring; by deploying a home grown solution.
                 </p>
               </li>
 
@@ -444,7 +460,7 @@ export default function Noon() {
 
                 <p className="ml-2 md:ml-4 mb-4">
                   <span className="text-black dark:text-white">
-                    The client module:
+                    The client module:{' '}
                   </span>
                   This module is responsible for sending messages to queues. It
                   allows the microservices to make requests to other
@@ -456,7 +472,7 @@ export default function Noon() {
 
                 <p className="ml-2 md:ml-4 mb-4">
                   <span className="text-black dark:text-white">
-                    The server module:
+                    The server module:{' '}
                   </span>
                   This module listens to the queues and responds to the messages
                   by sending ACKs (acknowledgements) to the corresponding
@@ -508,19 +524,22 @@ export default function Noon() {
                 </h4>
               </li>
 
-              <p className="ml-4 mb-4">
-                Lets take an example where one user is attempting to add another
-                user as a friend. After searching for that specific user and
-                getting the ES results, a friend request is sent:
+              <p className=" ">
+                Lets draw on an an example that illustrates how the graph DB
+                fits into the platform. We'll have one user who is attempting to
+                add another user as a friend: it starts with the user searching
+                for the profile who they want to add as a friend. After getting
+                the ES results, the user sends a friend request:
               </p>
 
               <CodeBlock
                 code={`await sendFriendRequest({
-                variables: {
-                  profileUuid: profile.uuid,
-                },
-              })`}
-              ></CodeBlock>
+  variables: {
+    profileUuid: profile.uuid,
+  },
+})`}
+              />
+
               <p>
                 where `profileUuid` is the uuid of the profile who is going to
                 receive the friend request. The resolver receives the request
@@ -530,65 +549,65 @@ export default function Noon() {
 
               <CodeBlock
                 code={`tx.run(
-                MATCH (p1:Profile {uuid: $sUuid}) 
-                MATCH (p2:Profile {uuid: $rUuid}) 
-                MERGE (p1)-[friendRequest:FRIEND_REQUEST 
-                {uuid: $recipientProfileUuid, username: $recipientProfileUsername }]->(p2) 
-                RETURN p1, friendRequest, p2,
-                {
-                  sUuid: senderProfileUuid,
-                  rUuid: recipientProfileUuid,
-                  recipientProfileUuid,
-                  recipientProfileUsername,
-                }
-              )`}
+  MATCH (p1:Profile {uuid: $sUuid}) 
+  MATCH (p2:Profile {uuid: $rUuid}) 
+  MERGE (p1)-[friendRequest:FRIEND_REQUEST 
+  {uuid: $recipientProfileUuid, username: $recipientProfileUsername }]->(p2) 
+  RETURN p1, friendRequest, p2,
+  {
+    sUuid: senderProfileUuid,
+    rUuid: recipientProfileUuid,
+    recipientProfileUuid,
+    recipientProfileUsername,
+  }
+)`}
               />
               <p>
-                A FRIEND_REQUEST relationship is created, going from profile1 to
-                profile2, between the two profiles and the details of the
-                receiving profile added to the relationship in order to easily
-                identify who that relationship is targeting. The receiving
-                profile then receives the request and can either deny or accept
-                the friend request. If accepted, an acceptFriendRequest request
-                is sent:
+                A FRIEND_REQUEST relationship is created between the two
+                profiles, going from profile1 to profile2, and the details of
+                the receiving profile added to the relationship in order to
+                easily identify who that relationship is targeting. The
+                receiving profile then receives the request and can either deny
+                or accept the friend request. If accepted, an
+                acceptFriendRequest request is sent:
               </p>
               <CodeBlock
                 code={`await acceptFriendRequest({
-                variables: {
-                  profileUuid: from,
-                },
-              })`}
+  variables: {
+    profileUuid: from,
+  },
+})`}
               />
               <p>
                 Where `from` is the uuid of the profile who originally sent the
-                friend request. We get that uuid from the Socketio payload. The
-                resolver receives the request and then calls the graph api to
+                friend request. We get that uuid from the websocket payload. The
+                resolver receives the request and then calls the graph API to
                 create that relationship:
               </p>
               <CodeBlock
-                code={`
-              tx.run(
-                Match (p1:Profile {uuid: $sUuid})  
-                Match (p2:Profile {uuid: $rUuid}) 
-                Merge (p1)-[friends:FRIENDS 
-                {uuid: $recipientProfileUuid, username: $recipientProfileUsername }]->(p2) 
-                Merge (p2)-[:FRIENDS {uuid: $senderProfileUuid, username: $senderProfileUsername }]->(p1) 
-                WITH p1, friends, p2 
-                Match (p1)-[fr:FRIEND_REQUEST]->(p2) 
-                DELETE fr 
-                RETURN p1, friends, p2,
-                {
-                  sUuid: senderProfileUuid,
-                  rUuid: recipientProfileUuid,
-                  recipientProfileUuid,
-                  recipientProfileUsername,
-                  senderProfileUsername,
-                  senderProfileUuid,
-                }
-              )
+                code={`tx.run(
+  Match (p1:Profile {uuid: $sUuid})  
+  Match (p2:Profile {uuid: $rUuid}) 
+  Merge (p1)-[friends:FRIENDS 
+  {uuid: $recipientProfileUuid, username: $recipientProfileUsername }]->(p2) 
+  Merge (p2)-[:FRIENDS {uuid: $senderProfileUuid, username: $senderProfileUsername }]->(p1) 
+  WITH p1, friends, p2 
+  Match (p1)-[fr:FRIEND_REQUEST]->(p2) 
+  DELETE fr 
+  RETURN p1, friends, p2,
+  {
+    sUuid: senderProfileUuid,
+    rUuid: recipientProfileUuid,
+    recipientProfileUuid,
+    recipientProfileUsername,
+    senderProfileUsername,
+    senderProfileUuid,
+  }
+)
               `}
               />
-              <p>
+
+              <p className="mb-4">
                 The cypher query creates a bi-directional relationship of
                 FRIENDS between the two profiles and then deletes the existing
                 FRIEND_REQUEST relationship that they have between them. The
@@ -596,11 +615,11 @@ export default function Noon() {
                 response, creates a conversation object and responds with the
                 conversation object. The user accepting the friend request then
                 receives the response, updates the store and emits an event to
-                the user who requested the friendship that the request has been
-                accepted. The user who initiated the friendship then receives
-                the socket event and also updates the store with the
-                conversation. A new conversation is created for both users and
-                they are now able to converse.
+                the user who requested indicating that friendship request has
+                been accepted. The user who initiated the friendship request
+                then receives the socket event and also updates the store with
+                the conversation. A new conversation is created for both users
+                and they are now able to converse.
               </p>
 
               <li ref={videoRef} className="mb-4">
@@ -649,7 +668,7 @@ export default function Noon() {
                   traffic. Although, for now, access is unrestricted for
                   development and testing purposes. You can access the Jitsi
                   instance running on the VPS by following the dedicated Noon
-                  domain on
+                  domain on{' '}
                   <a
                     className="underline text-black dark:text-white transform hover:scale-[1.01] hover:ml-1 transition-all text-th-primary-dark"
                     href="https://noon-vid.com"
@@ -697,22 +716,22 @@ export default function Noon() {
               </h3>
             </div>
 
-            <p className="ml-2 md:ml-4 mb-4 ">
-              The Noon web client is built as a Single Page Application (SPA),
-              written in TypeScript using React and Next.js as the framework. It
-              utilizes Redux Toolkit for state management. Real-time
-              functionality is implemented using Socket.io for bi-directional
-              communication between the client and server. GraphQL and Apollo
-              Client are used to handle queries and mutations. GraphQL Codegen
-              is used to automatically generate the GraphQL syntax, reducing the
-              need for manual type definitions. The design of the platform is
-              implemented with Chakra UI, a popular library for building
-              accessible, modular, and customizable UI components. For styling,
-              it uses TailwindCSS, a utility-first CSS framework for rapidly
-              building custom designs with a consistent look and feel. All these
-              technologies are used together to create a high-performance and
-              user-friendly client platform that seamlessly communicates with
-              the API, providing a smooth and responsive user experience.
+            <p className="ml-2 md:ml-4 mb-4">
+              The Noon web client is built as a SPA, written in TypeScript using
+              React and Next.js as the framework. It utilizes Redux Toolkit for
+              state management. Real-time functionality is implemented using
+              Socket.io for bi-directional communication between the client and
+              server. GraphQL and Apollo Client are used to handle queries and
+              mutations. GraphQL Codegen is used to automatically generate the
+              GraphQL syntax, reducing the need for manual type definitions. The
+              design of the platform at the present is implemented with Chakra
+              UI, a popular library for building accessible, modular, and
+              customizable UI components. For styling, it uses TailwindCSS, a
+              utility-first CSS framework for rapidly building custom designs
+              with a consistent look and feel. All these technologies are used
+              together to create a high-performance and user-friendly client
+              platform that seamlessly communicates with the backend, providing
+              a smooth and responsive user experience.
             </p>
 
             <p className="ml-2 md:ml-4 mb-4 ">
@@ -723,23 +742,17 @@ export default function Noon() {
 
             <p className="ml-2 md:ml-4 mb-4 ">
               All state in the application is managed using Redux/Redux Toolkit.
-              RTK allows for a centralized and predictable state management.
-              Sure, adding complexity (vuex/pinia {'>>'} redux, I will fight
-              over this) but without which using react context or a dedicated
-              pub/sub mechanism for events would have been necessary, and that
-              is a big nono in my eyes for anything resembling more than just
-              simple state management.
+              RTK allows for centralized and predictable state management.
             </p>
 
             <p className="ml-2 md:ml-4 mb-4 ">
               RTK is used to store the logged-in user, to populate the
               conversations, and to update the conversations with the messages
-              sent, amongst a myriad of other things. Additionally, I have also
-              used it to handle various UI changes such as toggling the menu,
-              displaying modals and toasts, and showing loading indicators. By
-              using Redux, I can ensure that the state of the application is
-              consistent and that all changes are handled in a predictable and
-              consistent way.
+              sent, amongst a myriad of other things. Additionally, I've used it
+              to handle various UI changes such as toggling the menu, displaying
+              modals and toasts, and showing loading indicators. By using Redux,
+              I can ensure that the state of the application is consistent and
+              that all changes are handled in a predictable and consistent way.
             </p>
 
             <h4 ref={RTKRef} className="w-full mb-2 text-lg md:text-xl">
@@ -833,10 +846,7 @@ export default function Noon() {
             {/*  handling any errors or disconnections.*/}
             {/*</p>*/}
 
-            <h4
-              ref={videoBridgeRef}
-              className="w-full mb-2 text-lg  md:text-xl"
-            >
+            <h4 ref={videoBridgeRef} className="w-full mb-2 text-lg md:text-xl">
               <a
                 className="underline flex items-center transform hover:scale-[1.01] hover:ml-2 transition-all text-th-primary-dark"
                 href="https://github.com/Frisbeetarian/noon-client/blob/main/src/components/Video.tsx"
@@ -1422,6 +1432,7 @@ export default function Noon() {
               </table>
             </div>
           </div>
+
           {/*<BlogPost*/}
           {/*  title="Rust Is The Future of JavaScript Infrastructure"*/}
           {/*  excerpt="Why is Rust being used to replace parts of the JavaScript web ecosystem like minification (Terser), transpilation (Babel), formatting (Prettier), bundling (webpack), linting (ESLint), and more?"*/}
