@@ -66,11 +66,20 @@ function NoonNavigation({
 
       if (
         scrollYLet > RPCRef.current.offsetTop &&
-        scrollYLet < videoRef.current.offsetTop
+        scrollYLet < neo4jRef.current.offsetTop
       ) {
         RPCNavRef.current.style.textDecoration = 'underline';
       } else {
         RPCNavRef.current.style.textDecoration = 'none';
+      }
+
+      if (
+        scrollYLet > neo4jRef.current.offsetTop &&
+        scrollYLet < videoRef.current.offsetTop
+      ) {
+        neo4jNavRef.current.style.textDecoration = 'underline';
+      } else {
+        neo4jNavRef.current.style.textDecoration = 'none';
       }
 
       if (
@@ -115,7 +124,7 @@ function NoonNavigation({
         dependenciesNavRef.current.style.textDecoration = 'none';
       }
     };
-    // clean up code
+
     window.removeEventListener('scroll', onScroll);
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);

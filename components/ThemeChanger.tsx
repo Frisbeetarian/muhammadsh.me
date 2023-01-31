@@ -25,30 +25,7 @@ const themes = [
   {
     name: 'dark',
     step: 0,
-    icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 26.88 33.34"
-        className="text-emerald-500 hover:text-emerald-300 ring-emerald-500 transition-all"
-        fill="currentColor"
-        stroke="none"
-        width="26"
-        height="26"
-      >
-        <path
-          d="M322.22-27.73l-5,2.5a.82.82,0,0,0-.38,1.12.86.86,0,0,0,.77.45.77.77,0,0,0,.38-.1l5-2.49a.84.84,0,0,0,.39-1.13.9.9,0,0,0-1.16-.35Z"
-          transform="translate(-306.66 40)"
-        />
-        <path
-          d="M322.22-22.88l-5,2.49a.82.82,0,0,0-.38,1.12.87.87,0,0,0,.77.46.79.79,0,0,0,.38-.11l5-2.49a.83.83,0,0,0,.39-1.12.89.89,0,0,0-1.16-.35Z"
-          transform="translate(-306.66 40)"
-        />
-        <path
-          d="M333.18-35.09l-6.73-4.77A.78.78,0,0,0,326-40H314.24a1.16,1.16,0,0,0-.5.14L307-35.09a.92.92,0,0,0-.35.7v22.11a.91.91,0,0,0,.35.7l6.73,4.78a.86.86,0,0,0,.5.14H326a1.16,1.16,0,0,0,.49-.14l6.73-4.78a.89.89,0,0,0,.36-.7V-34.39a.9.9,0,0,0-.36-.7Zm-5.71,2.46-2.22-1.58,1.16-3.58,4.63,3.3Zm-3.48,19H316.2l-2.53-1.79V-31.23L316.2-33H324l2.53,1.79v15.76Zm-.35-21.05h-7.09l-1.16-3.62h9.41Zm-8.7.49-2.21,1.58-3.62-1.86,4.67-3.3Zm-3,3.09v15.61l-3.61,1.86V-33ZM312.73-14l2.21,1.54-1.16,3.62-4.63-3.3ZM316.55-12h7.09l1.16,3.61h-9.41Zm8.7-.53L327.47-14l3.61,1.86-4.67,3.3Zm3-3V-31.12L331.85-33v19.33Z"
-          transform="translate(-306.66 40)"
-        />
-      </svg>
-    )
+    icon: <p></p>
   },
   {
     name: 'emerald',
@@ -109,7 +86,6 @@ const ThemeChanger = () => {
   const [selectedTheme, setSelectedTheme] = useState<Theme>();
   const { theme, setTheme } = useTheme();
 
-  // When mounted on client, now we can show the UI
   useEffect(() => setMounted(true), []);
 
   useEffect(() => {
@@ -141,7 +117,8 @@ const ThemeChanger = () => {
           setTheme(randomTheme.name);
         }}
       >
-        {mounted && selectedTheme.icon ? selectedTheme.icon : null}
+        {/*fwefwefwe*/}
+        {/*{mounted && selectedTheme.icon ? selectedTheme.step : null}*/}
       </button>
     </div>
   );

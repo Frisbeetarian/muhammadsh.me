@@ -80,11 +80,20 @@ function NoonMobileNavigation({
 
       if (
         scrollYLet > RPCRef.current.offsetTop &&
-        scrollYLet < videoRef.current.offsetTop
+        scrollYLet < neo4jRef.current.offsetTop
       ) {
         RPCNavRef.current.style.textDecoration = 'underline';
       } else {
         RPCNavRef.current.style.textDecoration = 'none';
+      }
+
+      if (
+        scrollYLet > neo4jRef.current.offsetTop &&
+        scrollYLet < videoRef.current.offsetTop
+      ) {
+        neo4jNavRef.current.style.textDecoration = 'underline';
+      } else {
+        neo4jNavRef.current.style.textDecoration = 'none';
       }
 
       if (
@@ -180,7 +189,7 @@ function NoonMobileNavigation({
 
   return (
     <div
-      className="flex  w-full justify-center p-4 bg-th-background  border-t-2 fixed bottom-0 z-50 text-sm text-th-primary-medium"
+      className="flex  w-full justify-center p-4 bg-th-background  border-t-2 fixed bottom-0 z-50 text-sm text-th-primary-dark"
       style={
         hideNav ? { opacity: 0, zIndex: '-1' } : { opacity: 1, zIndex: '50' }
       }

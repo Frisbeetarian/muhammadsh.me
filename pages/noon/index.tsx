@@ -524,31 +524,31 @@ export default function Noon() {
                 </h4>
               </li>
 
-              <p className=" ">
+              <p className="ml-2 md:ml-4">
                 Lets draw on an an example that illustrates how the graph DB
                 fits into the platform. We'll have one user who is attempting to
                 add another user as a friend: it starts with the user searching
                 for the profile who they want to add as a friend. After getting
                 the ES results, the user sends a friend request:
               </p>
-
-              <CodeBlock
-                code={`await sendFriendRequest({
+              <div className="ml-2 md:ml-4">
+                <CodeBlock
+                  code={`await sendFriendRequest({
   variables: {
     profileUuid: profile.uuid,
   },
 })`}
-              />
-
-              <p>
+                />
+              </div>
+              <p className="ml-2 md:ml-4">
                 where `profileUuid` is the uuid of the profile who is going to
                 receive the friend request. The resolver receives the request
                 and calls the graph API with sender and receiver details. The
                 method then initiates the following Cypher query:
               </p>
-
-              <CodeBlock
-                code={`tx.run(
+              <div className="ml-2 md:ml-4">
+                <CodeBlock
+                  code={`tx.run(
   MATCH (p1:Profile {uuid: $sUuid}) 
   MATCH (p2:Profile {uuid: $rUuid}) 
   MERGE (p1)-[friendRequest:FRIEND_REQUEST 
@@ -561,8 +561,9 @@ export default function Noon() {
     recipientProfileUsername,
   }
 )`}
-              />
-              <p>
+                />
+              </div>
+              <p className="ml-2 md:ml-4">
                 A FRIEND_REQUEST relationship is created between the two
                 profiles, going from profile1 to profile2, and the details of
                 the receiving profile added to the relationship in order to
@@ -571,21 +572,24 @@ export default function Noon() {
                 or accept the friend request. If accepted, an
                 acceptFriendRequest request is sent:
               </p>
-              <CodeBlock
-                code={`await acceptFriendRequest({
+              <div className="ml-2 md:ml-4">
+                <CodeBlock
+                  code={`await acceptFriendRequest({
   variables: {
     profileUuid: from,
   },
 })`}
-              />
-              <p>
+                />
+              </div>
+              <p className="ml-2 md:ml-4">
                 Where `from` is the uuid of the profile who originally sent the
                 friend request. We get that uuid from the websocket payload. The
                 resolver receives the request and then calls the graph API to
                 create that relationship:
               </p>
-              <CodeBlock
-                code={`tx.run(
+              <div className="ml-2 md:ml-4">
+                <CodeBlock
+                  code={`tx.run(
   Match (p1:Profile {uuid: $sUuid})  
   Match (p2:Profile {uuid: $rUuid}) 
   Merge (p1)-[friends:FRIENDS 
@@ -605,9 +609,9 @@ export default function Noon() {
   }
 )
               `}
-              />
-
-              <p className="mb-4">
+                />
+              </div>
+              <p className="mb-4 ml-2 md:ml-4">
                 The cypher query creates a bi-directional relationship of
                 FRIENDS between the two profiles and then deletes the existing
                 FRIEND_REQUEST relationship that they have between them. The
