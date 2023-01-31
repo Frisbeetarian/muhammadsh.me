@@ -9,7 +9,7 @@ export default function Home() {
   return (
     // <Suspense fallback={null}>
     <Container>
-      <div className="flex flex-col items-start justify-start max-w-4xl 2xl:max-w-4xl mx-auto mb-16 w-5/6 md:w-9/12">
+      <div className="flex flex-col items-start justify-start max-w-4xl 2xl:max-w-4xl mx-auto mb-16 w-full px-8 md:px-0 ">
         <div className="flex flex-col-reverse sm:flex-row items-start">
           <div className="flex flex-col md:pr-8 ">
             <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-1 text-th-primary-dark">
@@ -38,18 +38,6 @@ export default function Home() {
               and state driven client platforms.
             </p>
           </div>
-
-          {/*<div className="w-[80px] sm:w-[176px] relative mb-8 sm:mb-0 mr-auto">*/}
-          {/*  <Image*/}
-          {/*    alt="profile image"*/}
-          {/*    height={176}*/}
-          {/*    width={176}*/}
-          {/*    src="/avatar.jpg"*/}
-          {/*    sizes="30vw"*/}
-          {/*    priority*/}
-          {/*    className="rounded-full filter grayscale"*/}
-          {/*  />*/}
-          {/*</div>*/}
         </div>
 
         <h3 className="font-bold text-2xl md:text-4xl tracking-tight mb-4 mt-16 text-th-primary-dark">
@@ -88,28 +76,30 @@ export default function Home() {
           title="Toni Geitani - Laysa Kul Shay' Yashrab Al Ma' [Official Video]"
         />
 
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://www.youtube.com/playlist?list=PLxVxxL4yicyb41Ug_wFyrzr7lWgazshj4"
-          className="flex items-center mt-8 text-th-primary-dark leading-7 rounded-lg hover:text-gray-800 dark:hover:text-gray-200 transition-all h-6"
-        >
-          Watch all visualizations
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            className="h-6 w-6 ml-1"
+        <div className="w-full flex justify-end">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.youtube.com/playlist?list=PLxVxxL4yicyb41Ug_wFyrzr7lWgazshj4"
+            className="flex items-center mt-8 text-th-primary-dark leading-7 rounded-lg hover:text-gray-800 dark:hover:text-gray-200 transition-all h-6"
           >
-            <path
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M17.5 12h-15m11.667-4l3.333 4-3.333-4zm3.333 4l-3.333 4 3.333-4z"
-            />
-          </svg>
-        </a>
+            Watch all visualizations
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              className="h-6 w-6 ml-1"
+            >
+              <path
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M17.5 12h-15m11.667-4l3.333 4-3.333-4zm3.333 4l-3.333 4 3.333-4z"
+              />
+            </svg>
+          </a>
+        </div>
         <span className="h-8" />
       </div>
     </Container>

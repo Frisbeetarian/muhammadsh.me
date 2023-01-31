@@ -20,7 +20,6 @@ export default function Footer() {
       <hr className="w-full border-1 border-gray-200 dark:border-gray-800 mb-8" />
 
       <NowPlaying />
-      {/*<Tracks />*/}
 
       <div className="w-full max-w-2xl grid grid-cols-1 gap-4 pb-16 sm:grid-cols-3">
         <div className="flex flex-col space-y-4">
@@ -31,17 +30,25 @@ export default function Footer() {
             Home
           </Link>
           <Link
-            href="/noon/index"
+            href="/noon"
             className="text-gray-500 hover:text-gray-600 transition"
           >
             Noon
           </Link>
-          {/*<Link*/}
-          {/*  href="/newsletter"*/}
-          {/*  className="text-gray-500 hover:text-gray-600 transition"*/}
-          {/*>*/}
-          {/*  Newsletter*/}
-          {/*</Link>*/}
+
+          <Link
+            href="/visuals"
+            className="text-gray-500 hover:text-gray-600 transition"
+          >
+            Visuals
+          </Link>
+
+          <Link
+            href="/audio"
+            className="text-gray-500 hover:text-gray-600 transition"
+          >
+            Audio
+          </Link>
         </div>
         <div className="flex flex-col space-y-4">
           <ExternalLink href="https://github.com/Frisbeetarian">
@@ -50,33 +57,12 @@ export default function Footer() {
           <ExternalLink href="https://www.youtube.com/channel/UCBQifVrmfoQS3RqBx70tw7A">
             YouTube
           </ExternalLink>
+
+          <ExternalLink href="https://soundcloud.com/mohamad-hoho">
+            Soundcloud
+          </ExternalLink>
         </div>
-        <div className="flex flex-col space-y-4">
-          {/*<Link*/}
-          {/*  href="/uses"*/}
-          {/*  className="text-gray-500 hover:text-gray-600 transition"*/}
-          {/*>*/}
-          {/*  Uses*/}
-          {/*</Link>*/}
-          {/*<Link*/}
-          {/*  href="/guestbook"*/}
-          {/*  className="text-gray-500 hover:text-gray-600 transition"*/}
-          {/*>*/}
-          {/*  Guestbook*/}
-          {/*</Link>*/}
-          {/*<Link*/}
-          {/*  href="/snippets"*/}
-          {/*  className="text-gray-500 hover:text-gray-600 transition"*/}
-          {/*>*/}
-          {/*  Snippets*/}
-          {/*</Link>*/}
-          {/*<Link*/}
-          {/*  href="/tweets"*/}
-          {/*  className="text-gray-500 hover:text-gray-600 transition"*/}
-          {/*>*/}
-          {/*  Tweets*/}
-          {/*</Link>*/}
-        </div>
+        <div className="flex flex-col space-y-4"></div>
       </div>
     </footer>
   );

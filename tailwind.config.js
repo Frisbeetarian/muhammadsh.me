@@ -6,6 +6,8 @@ module.exports = {
   darkMode: false,
   theme: {
     extend: {
+      // border: {
+      // },
       colors: {
         emerald: colors.emerald,
         fuschia: colors.fuschia,
@@ -19,6 +21,8 @@ module.exports = {
         'th-accent-medium': 'var(--accent-medium)',
         'th-accent-light': 'var(--accent-light)',
         'blue-opaque': 'rgb(13 42 148 / 18%)',
+        'br-primary-light': 'var(--primary-light)',
+        'br-primary-dark': 'var(--primary-dark)',
         gray: {
           0: '#fff',
           100: '#fafafa',
