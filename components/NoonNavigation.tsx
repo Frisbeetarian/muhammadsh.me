@@ -114,9 +114,6 @@ function NoonNavigation({
       } else {
         dependenciesNavRef.current.style.textDecoration = 'none';
       }
-
-      console.log(window.scrollY);
-      console.log('internalsRef:', internalsRef.current.offsetTop);
     };
     // clean up code
     window.removeEventListener('scroll', onScroll);

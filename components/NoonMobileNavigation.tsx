@@ -27,20 +27,16 @@ function NoonMobileNavigation({
   const [hideNav, setHideNav] = useState(false);
 
   useEffect(() => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const documentHeight = document.documentElement.scrollHeight;
-    // console.log('document height:', documentHeight);
 
     if (scrollY + 1000 > documentHeight) {
-      // alert('FDSfds');
       setHideNav(true);
     }
+
     const onScroll = () => {
       const scrollYLet = scrollY + 20;
-      // console.log('document height on scroll:', documentHeight);
 
       if (scrollY + 1500 > documentHeight) {
-        // alert('FDSfds');
         setHideNav(true);
       } else {
         setHideNav(false);
@@ -132,11 +128,8 @@ function NoonMobileNavigation({
       } else {
         dependenciesNavRef.current.style.textDecoration = 'none';
       }
-
-      console.log(window.scrollY);
-      console.log('internalsRef:', internalsRef.current.offsetTop);
     };
-    // clean up code
+
     window.removeEventListener('scroll', onScroll);
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
@@ -278,16 +271,6 @@ function NoonMobileNavigation({
 
         <li className="text-xs ">(docs under construction)</li>
       </ul>
-
-      {/*<ul className="my-4">*/}
-      {/*  <li*/}
-      {/*    ref={dependenciesNavRef}*/}
-      {/*    onClick={handleDependenciesScroll}*/}
-      {/*    className="rajdhani-semi-bold hover:ml-1 cursor-pointer transition-all mb-1"*/}
-      {/*  >*/}
-      {/*    Dependencies*/}
-      {/*  </li>*/}
-      {/*</ul>*/}
     </div>
   );
 }
