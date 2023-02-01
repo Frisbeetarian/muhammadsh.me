@@ -40,7 +40,7 @@ export default function Home() {
           </div>
         </div>
 
-        <h3 className="font-bold text-2xl md:text-4xl tracking-tight mb-4 mt-16 text-th-primary-dark">
+        <h3 className="font-bold text-2xl md:text-4xl tracking-tight mb-2 md:mb-4 mt-16 text-th-primary-dark">
           Visualizations in Unreal Engine
         </h3>
 

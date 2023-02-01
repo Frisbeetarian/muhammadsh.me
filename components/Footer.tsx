@@ -59,8 +59,10 @@ export default function Footer() {
           </ExternalLink>
 
           <ExternalLink href="https://soundcloud.com/mohamad-hoho">
-            Soundcloud
+            SoundCloud
           </ExternalLink>
+
+          <ExternalLink href="/resume.pdf">Resume</ExternalLink>
         </div>
         <div className="flex flex-col space-y-4"></div>
       </div>

@@ -11,7 +11,7 @@ export default function VideoCard({ href, length, title, index }) {
         <div className="flex flex-col sm:flex-row justify-between items-baseline ">
           <div className="flex items-center">
             <div className="text-th-primary-dark text-left mr-6">{index}</div>
-            <h4 className="text-lg font-medium w-full text-th-primary-dark">
+            <h4 className="text-md md:text-lg font-medium w-full text-th-primary-dark">
               {title}
             </h4>
           </div>
