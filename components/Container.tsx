@@ -74,7 +74,7 @@ export default function Container(props) {
       >
         <nav
           id="scr2"
-          className="flex items-center justify-between w-full  border-gray-200 dark:border-gray-700  pt-8 pb-4 sm:pb-16 bg-opacity-60 "
+          className="flex items-center justify-between w-full border-gray-200 dark:border-gray-700 pt-8 pb-4 sm:pb-16 bg-opacity-60 "
         >
           <a href="#skip" className="skip-nav">
             Skip to content
